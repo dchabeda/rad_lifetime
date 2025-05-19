@@ -1,0 +1,103 @@
+Mon Mar  3 00:35:28 2025
+
+******************************************************************************
+
+Mon Mar  3 00:35:28 2025
+
+******************************************************************************
+
+ist->nx = 256	ist->dx = 0.500000
+ist->ny = 260	ist->dy = 0.500000
+ist->nx = 256	ist->dx = 0.500000
+ist->ny = 260	ist->dy = 0.500000
+ist->nz = 260	ist->dz = 0.500000
+par->epsx = 6.1 par->epsy = 6.1 par->epsz = 6.1
+ist->nz = 260	ist->dz = 0.500000
+par->epsx = 6.1 par->epsy = 6.1 par->epsz = 6.1
+fermiEnergy = -0.19
+fermiEnergy = -0.19
+The number of openMP threads used = 64
+Total # of filtered hole eigenstates = 90
+Total # of filtered electron eigenstates = 77
+The eval.par index of the HOMO state = 99
+The eval.par index of the LUMO state = 100
+The number of openMP threads used = 64
+Total # of filtered hole eigenstates = 90
+Total # of filtered electron eigenstates = 77
+The eval.par index of the HOMO state = 99
+The eval.par index of the LUMO state = 100
+The HOMO energy = -0.22788057 -6.20094936
+The LUMO energy = -0.15943158 -4.33835640
+Fundamental gap = 0.0684489943 1.8625929631
+The total number of atoms = 4300
+Number of grid points used: nx = 256  ny = 260  nz = 260
+Length of pseudopotential files, npot = 8192
+Kinetic energy maximum = 10.0000
+Dielectric Constant: epsx = 6.1000 epsy = 6.1000 epsz = 6.1000
+Maximum sigma for an eigenstate, deps = 0.0001
+Energy windows, electrons = 0.2000 holes = 0.1000
+The number of hole eigenstates within 0.1000 of the HOMO energy = 90
+The number of electron eigenstates within 0.2000 of the LUMO energy = 77
+Total number of carrier states, ms = 167
+The HOMO energy = -0.22788057 -6.20094936
+The LUMO energy = -0.15943158 -4.33835640
+Fundamental gap = 0.0684489943 1.8625929631
+The total number of atoms = 4300
+Number of grid points used: nx = 256  ny = 260  nz = 260
+Length of pseudopotential files, npot = 8192
+Kinetic energy maximum = 10.0000
+Dielectric Constant: epsx = 6.1000 epsy = 6.1000 epsz = 6.1000
+Maximum sigma for an eigenstate, deps = 0.0001
+Energy windows, electrons = 0.2000 holes = 0.1000
+The number of hole eigenstates within 0.1000 of the HOMO energy = 90
+The number of electron eigenstates within 0.2000 of the LUMO energy = 77
+Total number of carrier states, ms = 167
+QD (minimum) dimensions: xd = 64.00 yd = 65.00 zd = 65.00
+Final Box Dimensions: xd = 64 yd = 65 zd = 65
+Gamma = 0.054688
+Grid point spacing: dx = 0.5000 dy = 0.5000 dz = 0.5000 dv = 0.125000 dr = 0.866025
+QD (minimum) dimensions: xd = 64.00 yd = 65.00 zd = 65.00
+Final Box Dimensions: xd = 64 yd = 65 zd = 65
+Gamma = 0.054688
+Grid point spacing: dx = 0.5000 dy = 0.5000 dz = 0.5000 dv = 0.125000 dr = 0.866025
+gamma = 0.0546875  gammaeps = 0.135068
+sqrtaveps = 2.46982
+grid->dkx = 0.0490874 grid->dky = 0.0483322 grid->dkz = 0.0483322
+ngrid_1 = 5.77848e-08
+gamma = 0.0546875  gammaeps = 0.135068
+sqrtaveps = 2.46982
+grid->dkx = 0.0490874 grid->dky = 0.0483322 grid->dkz = 0.0483322
+ngrid_1 = 5.77848e-08
+The index of lowest energy occupied level used = 1
+allocating memory for 90 hole and 77 electron states
+closed ppsifreeing evalindex
+freeing psihomo
+freeing psilumo
+Number of hole eigenstates used in the BSE calculation = 24
+Number of electron eigenstates used in the BSE calculation =  24
+Total number of eigenstates used in the BSE calculation = 48
+
+Computing spin composition of qp spinors | Mon Mar  3 00:36:05 2025
+
+Starting calculation of BSE kernel | Mon Mar  3 00:36:06 2025
+
+Calculating direct matrix | Mon Mar  3 00:36:06 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 1
+Calculating exchange matrix | Mon Mar  3 00:36:11 2025
+
+	  [                ]   0% | Mon Mar  3 00:36:20 2025
+
+	  [                ]   0% | Mon Mar  3 00:36:22 2025
+
+	  [####            ]  29% | Mon Mar  3 00:44:28 2025
+
+	  [####            ]  29% | Mon Mar  3 00:44:59 2025
+
+	  [#########       ]  58% | Mon Mar  3 01:03:16 2025
+
+	  [#########       ]  58% | Mon Mar  3 01:09:10 2025
+
+	  [##############  ]  88% | Mon Mar  3 01:32:10 2025
+

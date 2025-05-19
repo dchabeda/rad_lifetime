@@ -1,0 +1,112 @@
+Sun Mar  9 01:45:09 2025
+
+******************************************************************************
+
+ist->nx = 304	ist->dx = 0.500000
+ist->ny = 304	ist->dy = 0.500000
+ist->nz = 304	ist->dz = 0.500000
+par->epsx = 6.1 par->epsy = 6.1 par->epsz = 6.1
+fermiEnergy = -0.19
+The number of openMP threads used = 64
+Total # of filtered hole eigenstates = 77
+Total # of filtered electron eigenstates = 113
+The eval.par index of the HOMO state = 89
+The eval.par index of the LUMO state = 90
+The HOMO energy = -0.22991119 -6.25620527
+The LUMO energy = -0.15762971 -4.28932517
+Fundamental gap = 0.0722814740 1.9668801027
+The total number of atoms = 7344
+Number of grid points used: nx = 304  ny = 304  nz = 304
+Length of pseudopotential files, npot = 8192
+Kinetic energy maximum = 10.0000
+Dielectric Constant: epsx = 6.1000 epsy = 6.1000 epsz = 6.1000
+Maximum sigma for an eigenstate, deps = 0.0001
+Energy windows, electrons = 0.2000 holes = 0.1000
+The number of hole eigenstates within 0.1000 of the HOMO energy = 77
+The number of electron eigenstates within 0.2000 of the LUMO energy = 113
+Total number of carrier states, ms = 190
+QD (minimum) dimensions: xd = 76.00 yd = 76.00 zd = 76.00
+Final Box Dimensions: xd = 76 yd = 76 zd = 76
+Gamma = 0.046053
+Grid point spacing: dx = 0.5000 dy = 0.5000 dz = 0.5000 dv = 0.125000 dr = 0.866025
+gamma = 0.0460526  gammaeps = 0.113742
+sqrtaveps = 2.46982
+grid->dkx = 0.0413367 grid->dky = 0.0413367 grid->dkz = 0.0413367
+ngrid_1 = 3.55942e-08
+The index of lowest energy occupied level used = 3
+allocating memory for 77 hole and 113 electron states
+closed ppsifreeing evalindex
+freeing psihomo
+freeing psilumo
+Number of hole eigenstates used in the BSE calculation = 8
+Number of electron eigenstates used in the BSE calculation =  8
+Total number of eigenstates used in the BSE calculation = 16
+
+Computing spin composition of qp spinors | Sun Mar  9 01:45:43 2025
+
+Starting calculation of BSE kernel | Sun Mar  9 01:45:55 2025
+
+Calculating direct matrix | Sun Mar  9 01:45:55 2025
+
+	  [                ]   0% | Sun Mar  9 01:46:22 2025
+
+	  [######          ]  38% | Sun Mar  9 01:47:07 2025
+
+	  [############    ]  75% | Sun Mar  9 01:47:48 2025
+
+	  [##############  ]  88% | Sun Mar  9 01:48:03 2025
+
+Calculating exchange matrix | Sun Mar  9 01:48:03 2025
+
+	  [                ]   0% | Sun Mar  9 01:48:19 2025
+
+	  [######          ]  38% | Sun Mar  9 01:49:00 2025
+
+	  [############    ]  75% | Sun Mar  9 01:49:40 2025
+
+	  [##############  ]  88% | Sun Mar  9 01:49:56 2025
+
+
+Computing angular momentum elements | Sun Mar  9 01:49:56 2025
+
+Hole States: | Sun Mar  9 01:50:01 2025
+
+0	0	-1.137656	-0.504025	1.410901	3137.447577	2.762396
+1	1	1.137657	0.504025	-1.410901	3137.447577	2.762396
+2	2	1.166116	0.599110	0.508513	3173.856271	-2.119147
+3	3	1.290664	-1.560931	-0.829078	3173.856280	-2.119147
+4	4	-1.934660	0.743808	-1.862301	3173.856267	-2.119147
+5	5	-0.522121	0.218013	2.182865	3173.856268	-2.119147
+6	6	-0.150967	0.125428	0.398170	2404.803202	-0.668567
+7	7	0.150968	-0.125428	-0.398170	2404.803215	-0.668567
+Electron States: | Sun Mar  9 01:50:50 2025
+
+8	8	0.306909	-0.281764	-1.124850	1641.426303	-1.777178
+9	9	-0.306909	0.281764	1.124850	1641.426302	-1.777178
+10	10	-0.420590	-1.174040	1.127105	2255.682886	1.628323
+11	11	0.420590	1.174040	-1.127105	2255.682888	1.628323
+12	12	1.845191	2.275850	0.148770	2239.174946	-3.214385
+13	13	-2.011782	-2.019385	-0.366035	2239.174943	-3.214385
+14	14	1.164098	-1.848200	2.337090	2239.174944	-3.214385
+15	15	-0.997507	1.591736	-2.119825	2239.174945	-3.214385
+
+Computing spinor BSE | Sun Mar  9 01:51:44 2025
+
+The number of electron-hole pairs in the exciton basis = 64
+Ground state exciton has energy = 0.0690220089 (1.8781854917 eV) (-0.0000000000 Imag)
+Compute excitonic spin expectation values | Sun Mar  9 01:51:44 2025
+
+Compute exciton orbital ang mom expectation values | Sun Mar  9 01:51:44 2025
+
+Compute excitonic spin-orbit expectation values | Sun Mar  9 01:51:44 2025
+
+Compute all excitonic states | Sun Mar  9 01:51:44 2025
+
+U^+ H = U^+HU | Sun Mar  9 01:51:44 2025
+
+Compute excitonic optical properties | Sun Mar  9 01:51:44 2025
+
+
+******************************************************************************
+
+Sun Mar  9 01:51:44 2025

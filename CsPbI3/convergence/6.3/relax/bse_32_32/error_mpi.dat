@@ -1,0 +1,4 @@
+slurmstepd: error: execve(): /pscratch/sd/d/dchabeda/filter_bse/r_10x10x10_CsPbI3/bse_32_32/./spinorBSE.x: No such file or directory
+slurmstepd: error: execve(): /pscratch/sd/d/dchabeda/filter_bse/r_10x10x10_CsPbI3/bse_32_32/./spinorBSE.x: No such file or directory
+srun: error: nid005060: tasks 0-1: Exited with exit code 2
+srun: Terminating StepId=36468851.0

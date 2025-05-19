@@ -1,0 +1,161 @@
+******************************************************************************
+
+RUNNING PROGRAM: BETHE-SALPETHER
+This calculation began at: Wed Apr  2 18:08:38 2025
+
+******************************************************************************
+
+
+******************************************************************************
+
+1.	INITIALIZING JOB | Wed Apr  2 18:08:38 2025
+
+
+******************************************************************************
+
+Reading UNSAFE input from unsafe_input.par:
+Done reading in unsafe_input.par
+
+xmin = -70 ymin = -70 zmin = -70
+nx = 280 ny = 280 nz = 280
+dx = 0.5 dy = 0.5 dz = 0.5
+grid->dv = 0.125 
+natoms = 5687
+mn_states_tot = 160
+Found homo_idx = 99
+Done with function read_unsafe_input
+
+Reading BSE job specifications from input.par:
+
+	Grid parameters from filter job:
+	----------------------------------
+	nx = 280, ny = 280, nz = 280
+	dx = 0.5, dy = 0.5, dz = 0.5
+	ngrid = 21952000 nspin = 2 nspinngrid = 43904000
+
+	Parameters & counters for BSE algorithm:
+	-------------------------------------------
+	maxHoleStates (# h+ in basis) = 96
+	maxElecStates (# e- in basis) = 64
+	sigmaECut = 0.0001 a.u.
+	DeltaE_hole = 0.04 a.u.  DeltaE_elec = 0.04 a.u.
+	KEmax = 20 a.u.
+	fermiEnergy = -0.19 a.u.
+
+	Dielectric screening options:
+	-------------------------------
+	epsX = 6.1
+	epsY = 6.1
+	epsZ = 6.1
+	Pseudopotentials were short ranged.
+
+	Parameters for two-component representation:
+	----------------------------------------------
+	Spinor wavefunctions turned ON!
+	Spin-orbit coupling is ON!
+	Non-local potential is ON!
+	Wavefunctions are COMPLEX valued! complex_idx = 2
+
+	Flags for optional output:
+	----------------------------
+	Computing spin-allowed sector of BSE matrix -> bright states
+	Timing specs will NOT be printed
+	Fixed point densities will NOT be printed
+	Spin and Ang. Mom. statistics will NOT be computed
+
+	Parameters for parallelization:
+	-------------------------------
+	nThreads (# OMP threads) = 64
+
+	Flags for restarting computation:
+	-----------------------------------
+	No checkpoint saves requested
+	No checkpoint specified for restart. Job will run in normal sequence.
+
+Setting quasiparticle basis indices:
+
+	Total # of filtered hole eigenstates = 96
+	Total # of filtered electron eigenstates = 64
+	The filter eval.dat index of the HOMO state = 95  LUMO state = 96
+
+	Unconstrained energy span of holes, 0.0123 a.u. (0.34 eV) < desired span = 0.04 a.u. (1.1 eV)
+	**Increase size of VB basis states to reach desired result**
+	Unconstrained energy span of elecs, 0.00988 a.u. (0.27 eV) < desired span = 0.04 a.u. (1.1 eV)
+	**Increase size of CB basis states to reach desired result**
+
+	Selected # of filtered h+ qp basis states = 96
+	Selected # of filtered e- qp basis states = 64
+	Total number of quasiparticle states, n_qp = 160
+	The BSEeval.par index of the HOMO state = 95  LUMO state = 96
+	The HOMO energy = -0.227752 a.u. -6.197 eV
+	The LUMO energy = -0.158656 a.u. -4.317 eV
+	Fundamental gap = 0.069096 a.u. 1.880 eV
+
+Reading quasiparticle basis wavefunctions:
+
+Computing spin composition of quasiparticle spinors | Wed Apr  2 18:12:17 2025
+
+
+ Time for computing all spins: 1.691671
+
+
+******************************************************************************
+
+4.	COMPUTING SINGLE-PARTICLE PROPERTIES | Wed Apr  2 18:12:19 2025
+
+
+******************************************************************************
+Allocating memory for single particle matrix elements... done
+
+Electric transition dipole moment...
+Duration of computing dipole: 91.399645 s (0.014876 s per transition)
+
+Magnetic transition dipole moment...
+Duration of computing mag dipole: 183.555270 s (0.029876 s per transition)
+
+
+******************************************************************************
+
+2.	COMPUTING ELECTRON-HOLE INTERACTION POTENTIALS | Wed Apr  2 18:16:54 2025
+
+
+******************************************************************************
+Allocating memory for hartree, direct, and exchange potentials... done.
+Computing interaction potential on grid...
+	Bare Coulomb potential, v(r, r')...
+	Screened Coulomb potential, W(r, r')...
+  Done generating e-h interaction potential.
+
+
+******************************************************************************
+
+3.	COMPUTING ELEC-HOLE INTERACTION KERNEL | Wed Apr  2 18:16:56 2025
+
+
+******************************************************************************
+
+The number of electron-hole pairs in the exciton basis = 6144
+
+flag.coulombDone is on -> loading matrix elements from files | Wed Apr  2 18:16:56 2025
+
+Loading direct mat
+Loading exchange mat
+
+Ground state exciton has energy = 0.06515 a.u. | 1.77284 eV (-0.00000 Imag)
+
+
+******************************************************************************
+
+  -  COMPUTING XTON OPTICAL PROPERTIES | Wed Apr  2 18:32:01 2025
+
+
+******************************************************************************
+
+
+******************************************************************************
+
+DONE WITH PROGRAM: BETHE-SALPETHER
+This calculation ended at: Wed Apr  2 18:32:07 2025
+
+Total job CPU time (sec) 4.712e+04, wall run time (sec) 1409
+******************************************************************************

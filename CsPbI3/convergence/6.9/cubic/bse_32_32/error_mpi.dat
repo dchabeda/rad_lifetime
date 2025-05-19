@@ -1,0 +1,10 @@
+srun: error: nid006178: task 7: Segmentation fault
+srun: Terminating StepId=36941009.0
+srun: error: nid006178: task 6: Segmentation fault
+slurmstepd: error: *** STEP 36941009.0 ON nid005202 CANCELLED AT 2025-03-17T07:12:52 ***
+srun: error: nid006009: task 2: Segmentation fault
+srun: error: nid005202: task 1: Segmentation fault
+srun: error: nid006009: task 3: Terminated
+srun: error: nid005202: task 0: Terminated
+srun: error: nid006077: tasks 4-5: Terminated
+srun: Force Terminated StepId=36941009.0

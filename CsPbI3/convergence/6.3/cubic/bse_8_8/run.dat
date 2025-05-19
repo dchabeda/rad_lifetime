@@ -1,0 +1,71 @@
+Tue Mar  4 23:03:58 2025
+
+******************************************************************************
+
+ist->nx = 256	ist->dx = 0.500000
+ist->ny = 256	ist->dy = 0.500000
+ist->nz = 256	ist->dz = 0.500000
+par->epsx = 6.1 par->epsy = 6.1 par->epsz = 6.1
+fermiEnergy = -0.19
+The number of openMP threads used = 64
+Total # of filtered hole eigenstates = 76
+Total # of filtered electron eigenstates = 73
+The eval.par index of the HOMO state = 79
+The eval.par index of the LUMO state = 80
+The HOMO energy = -0.23037365 -6.26878959
+The LUMO energy = -0.15688902 -4.26916987
+Fundamental gap = 0.0734846322 1.9996197213
+The total number of atoms = 5631
+Number of grid points used: nx = 256  ny = 256  nz = 256
+Length of pseudopotential files, npot = 8192
+Kinetic energy maximum = 10.0000
+Dielectric Constant: epsx = 6.1000 epsy = 6.1000 epsz = 6.1000
+Maximum sigma for an eigenstate, deps = 0.0001
+Energy windows, electrons = 0.2000 holes = 0.1000
+The number of hole eigenstates within 0.1000 of the HOMO energy = 76
+The number of electron eigenstates within 0.2000 of the LUMO energy = 73
+Total number of carrier states, ms = 149
+QD (minimum) dimensions: xd = 64.00 yd = 64.00 zd = 64.00
+Final Box Dimensions: xd = 64 yd = 64 zd = 64
+Gamma = 0.054688
+Grid point spacing: dx = 0.5000 dy = 0.5000 dz = 0.5000 dv = 0.125000 dr = 0.866025
+gamma = 0.0546875  gammaeps = 0.135068
+sqrtaveps = 2.46982
+grid->dkx = 0.0490874 grid->dky = 0.0490874 grid->dkz = 0.0490874
+ngrid_1 = 5.96046e-08
+The index of lowest energy occupied level used = 0
+allocating memory for 76 hole and 73 electron states
+closed ppsifreeing evalindex
+freeing psihomo
+freeing psilumo
+Number of hole eigenstates used in the BSE calculation = 8
+Number of electron eigenstates used in the BSE calculation =  8
+Total number of eigenstates used in the BSE calculation = 16
+
+Computing spin composition of qp spinors | Tue Mar  4 23:04:22 2025
+
+Starting calculation of BSE kernel | Tue Mar  4 23:04:26 2025
+
+Calculating direct matrix | Tue Mar  4 23:04:26 2025
+
+	  [                ]   0% | Tue Mar  4 23:04:45 2025
+
+	  [######          ]  38% | Tue Mar  4 23:05:22 2025
+
+	  [############    ]  75% | Tue Mar  4 23:05:55 2025
+
+	  [##############  ]  88% | Tue Mar  4 23:06:07 2025
+
+Calculating exchange matrix | Tue Mar  4 23:06:07 2025
+
+	  [                ]   0% | Tue Mar  4 23:06:19 2025
+
+	  [######          ]  38% | Tue Mar  4 23:06:57 2025
+
+	  [############    ]  75% | Tue Mar  4 23:07:35 2025
+
+	  [##############  ]  88% | Tue Mar  4 23:07:48 2025
+
+
+Computing angular momentum elements | Tue Mar  4 23:07:48 2025
+

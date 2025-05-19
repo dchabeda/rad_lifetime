@@ -1,0 +1,336 @@
+Wed Mar 19 01:58:21 2025
+
+******************************************************************************
+
+ist->nx = 280	ist->dx = 0.500000
+ist->ny = 280	ist->dy = 0.500000
+ist->nz = 280	ist->dz = 0.500000
+par->epsx = 6.1 par->epsy = 6.1 par->epsz = 6.1
+fermiEnergy = -0.19
+The number of openMP threads used = 64
+Total # of filtered hole eigenstates = 64
+Total # of filtered electron eigenstates = 65
+The eval.par index of the HOMO state = 63
+The eval.par index of the LUMO state = 64
+The HOMO energy = -0.22775167 -6.19744179
+The LUMO energy = -0.15865563 -4.31724174
+Fundamental gap = 0.0690960424 1.8802000476
+The total number of atoms = 5687
+Number of grid points used: nx = 280  ny = 280  nz = 280
+Length of pseudopotential files, npot = 8192
+Kinetic energy maximum = 10.0000
+Dielectric Constant: epsx = 6.1000 epsy = 6.1000 epsz = 6.1000
+Maximum sigma for an eigenstate, deps = 0.0001
+Energy windows, electrons = 0.2000 holes = 0.1000
+The number of hole eigenstates within 0.1000 of the HOMO energy = 64
+The number of electron eigenstates within 0.2000 of the LUMO energy = 64
+Total number of carrier states, ms = 128
+QD (minimum) dimensions: xd = 70.00 yd = 70.00 zd = 70.00
+Final Box Dimensions: xd = 70 yd = 70 zd = 70
+Gamma = 0.050000
+Grid point spacing: dx = 0.5000 dy = 0.5000 dz = 0.5000 dv = 0.125000 dr = 0.866025
+gamma = 0.05  gammaeps = 0.123491
+sqrtaveps = 2.46982
+grid->dkx = 0.0448799 grid->dky = 0.0448799 grid->dkz = 0.0448799
+ngrid_1 = 4.55539e-08
+The index of lowest energy occupied level used = 0
+allocating memory for 64 hole and 64 electron states
+closed ppsifreeing evalindex
+freeing psihomo
+freeing psilumo
+Number of hole eigenstates used in the BSE calculation = 64
+Number of electron eigenstates used in the BSE calculation =  64
+Total number of eigenstates used in the BSE calculation = 128
+
+Computing spin composition of qp spinors | Wed Mar 19 02:01:25 2025
+
+Starting calculation of BSE kernel | Wed Mar 19 02:02:31 2025
+
+Determining the workload for abtot = 4096 on MPI even rank 0
+even rank 0 sqrt even/size = 0
+even rank 0 start = 0
+even rank 0 end = 4096
+Number of direct mat cycles = 4096
+Calculating screened direct matrix, K^d_ab,ij on rank 0 | Wed Mar 19 02:02:31 2025
+
+Determining the workload for abtot = 4096 on MPI even rank 4
+even rank 4 sqrt even/size = 0.707107
+even rank 4 start = 4
+even rank 4 end = 4096
+Calculating screened direct matrix, K^d_ab,ij on rank 4 | Wed Mar 19 02:02:31 2025
+
+Determining the workload for abtot = 4096 on MPI even rank 5
+even rank 5 sqrt even/size = 0.790569
+even rank 5 start = 5
+even rank 5 end = 4096
+Calculating screened direct matrix, K^d_ab,ij on rank 5 | Wed Mar 19 02:02:31 2025
+
+Determining the workload for aitot = 4096 on MPI odd rank 1
+odd rank 1 sqrt odd/size = 0.353553
+odd rank 1 start = 1
+odd rank 1 end = 2048
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 3 | Wed Mar 19 02:02:31 2025
+ 
+Determining the workload for abtot = 4096 on MPI even rank 6
+even rank 6 sqrt even/size = 0.866025
+even rank 6 start = 6
+even rank 6 end = 4096
+Calculating screened direct matrix, K^d_ab,ij on rank 6 | Wed Mar 19 02:02:31 2025
+
+Determining the workload for abtot = 4096 on MPI even rank 3
+even rank 3 sqrt even/size = 0.612372
+even rank 3 start = 3
+even rank 3 end = 4096
+Calculating screened direct matrix, K^d_ab,ij on rank 3 | Wed Mar 19 02:02:31 2025
+
+Determining the workload for abtot = 4096 on MPI even rank 7
+even rank 7 sqrt even/size = 0.935414
+even rank 7 start = 7
+even rank 7 end = 4096
+Calculating screened direct matrix, K^d_ab,ij on rank 7 | Wed Mar 19 02:02:31 2025
+
+Determining the workload for abtot = 4096 on MPI even rank 2
+even rank 2 sqrt even/size = 0.5
+even rank 2 start = 2
+even rank 2 end = 4096
+Calculating screened direct matrix, K^d_ab,ij on rank 2 | Wed Mar 19 02:02:31 2025
+
+Determining the workload for aitot = 4096 on MPI odd rank 4
+odd rank 4 sqrt odd/size = 0.707107
+odd rank 4 start = 4
+odd rank 4 end = 3238
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 9 | Wed Mar 19 02:02:31 2025
+ 
+Determining the workload for aitot = 4096 on MPI odd rank 5
+odd rank 5 sqrt odd/size = 0.790569
+odd rank 5 start = 5
+odd rank 5 end = 3547
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 11 | Wed Mar 19 02:02:31 2025
+ 
+Determining the workload for aitot = 4096 on MPI odd rank 0
+odd rank 0 sqrt odd/size = 0
+odd rank 0 start = 0
+odd rank 0 end = 1448
+Number of exchange mat cycles = 1448
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 1 | Wed Mar 19 02:02:31 2025
+ 
+Determining the workload for aitot = 4096 on MPI odd rank 3
+odd rank 3 sqrt odd/size = 0.612372
+odd rank 3 start = 3
+odd rank 3 end = 2896
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 7 | Wed Mar 19 02:02:31 2025
+ 
+Determining the workload for abtot = 4096 on MPI even rank 1
+even rank 1 sqrt even/size = 0.353553
+even rank 1 start = 1
+even rank 1 end = 4096
+Calculating screened direct matrix, K^d_ab,ij on rank 1 | Wed Mar 19 02:02:31 2025
+
+Determining the workload for aitot = 4096 on MPI odd rank 7
+odd rank 7 sqrt odd/size = 0.935414
+odd rank 7 start = 7
+odd rank 7 end = 4096
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 15 | Wed Mar 19 02:02:31 2025
+ 
+Determining the workload for aitot = 4096 on MPI odd rank 6
+odd rank 6 sqrt odd/size = 0.866025
+odd rank 6 start = 6
+odd rank 6 end = 3831
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 13 | Wed Mar 19 02:02:31 2025
+ 
+Determining the workload for aitot = 4096 on MPI odd rank 2
+odd rank 2 sqrt odd/size = 0.5
+odd rank 2 start = 2
+odd rank 2 end = 2508
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 5 | Wed Mar 19 02:02:31 2025
+ 
+	  [                ]   0% | Wed Mar 19 02:02:31 2025
+
+	  [                ]   0% | Wed Mar 19 02:03:22 2025
+
+	  [####            ]  25% | Wed Mar 19 02:23:17 2025
+
+	  [####            ]  25% | Wed Mar 19 02:38:06 2025
+
+	  [########        ]  50% | Wed Mar 19 03:05:35 2025
+
+	  [########        ]  50% | Wed Mar 19 03:50:20 2025
+
+	  [############    ]  75% | Wed Mar 19 04:17:23 2025
+
+	  [############    ]  75% | Wed Mar 19 05:14:31 2025
+
+  Done computing direct mat | Wed Mar 19 06:00:51 2025
+
+  Done computing exchange mat | Wed Mar 19 06:44:26 2025
+
+Successfully reduced exchange mat from even ranks | Wed Mar 19 06:55:27 2025
+
+Successfully reduced direct mat from even ranks | Wed Mar 19 06:55:27 2025
+
+Successfully sent exchange mat to mpi_rank 0 | Wed Mar 19 06:55:27 2025
+
+
+Computing angular momentum elements | Wed Mar 19 06:55:45 2025
+
+Hole States: | Wed Mar 19 06:58:16 2025
+
+0	0	0.033763	-0.668825	0.492502	3176.112249	0.523569
+1	1	-0.033750	0.668837	-0.492497	3176.112333	0.523576
+2	2	-1.518737	-0.647660	-0.624986	3923.265804	-2.635443
+3	3	1.518736	0.647651	0.624990	3923.266864	-2.635441
+4	4	0.945718	-1.631336	-0.219593	3190.005479	2.605890
+5	5	-0.945717	1.631336	0.219593	3190.005535	2.605890
+6	6	1.057600	-2.025439	-0.067499	3205.812879	2.567894
+7	7	-1.057599	2.025440	0.067499	3205.812808	2.567893
+8	8	-2.873646	2.923766	0.007427	3220.665570	-2.642878
+9	9	2.873647	-2.923765	-0.007427	3220.665760	-2.642878
+10	10	0.948477	1.060369	0.327531	3221.351028	-1.828436
+11	11	-0.948476	-1.060369	-0.327531	3221.350763	-1.828436
+12	12	-0.045258	0.450335	1.970195	3173.824721	0.545278
+13	13	0.045258	-0.450335	-1.970194	3173.824851	0.545277
+14	14	-0.599158	-0.001975	0.000592	3185.186569	0.015165
+15	15	0.599157	0.001975	-0.000593	3185.186631	0.015166
+16	16	-0.053616	0.512555	0.005313	2532.418626	0.428017
+17	17	0.053616	-0.512555	-0.005312	2532.418690	0.428017
+18	18	0.116690	1.330930	0.259640	3852.495541	1.591084
+19	19	-0.116690	-1.330929	-0.259641	3852.495496	1.591083
+20	20	0.464540	0.539295	0.914826	3276.402328	-1.182125
+21	21	-0.464540	-0.539295	-0.914826	3276.402318	-1.182125
+22	22	1.546600	-1.583518	1.138115	3878.576584	-1.167678
+23	23	-1.546600	1.583518	-1.138115	3878.576595	-1.167678
+24	24	0.051525	-0.431706	0.026067	2532.516689	0.531337
+25	25	-0.051525	0.431706	-0.026067	2532.516671	0.531337
+26	26	0.144676	0.012703	-2.337869	3955.115880	-2.414837
+27	27	-0.144677	-0.012703	2.337869	3955.115924	-2.414837
+28	28	0.289060	-0.388168	0.138356	2564.398726	0.457214
+29	29	-0.289060	0.388168	-0.138356	2564.398708	0.457214
+30	30	-0.697610	0.441433	0.605497	3210.836187	1.341688
+31	31	0.697610	-0.441433	-0.605497	3210.836182	1.341688
+32	32	0.431430	-0.719757	0.737351	3258.754848	0.599545
+33	33	-0.431430	0.719757	-0.737351	3258.754864	0.599545
+34	34	0.972734	-0.913667	0.127560	3282.868157	-0.899428
+35	35	-0.972734	0.913667	-0.127560	3282.868159	-0.899428
+36	36	1.116161	-1.014973	-0.039942	3275.821020	-0.735349
+37	37	-1.116161	1.014973	0.039942	3275.821017	-0.735350
+38	38	0.662747	0.003634	-0.547711	3224.272790	1.296411
+39	39	-0.662747	-0.003634	0.547711	3224.272798	1.296411
+40	40	-0.137922	-0.000879	-2.274559	3305.776818	-1.718137
+41	41	0.137922	0.000879	2.274559	3305.776824	-1.718137
+42	42	0.323733	-0.099903	0.111510	2604.947798	0.273428
+43	43	-0.323733	0.099903	-0.111510	2604.947796	0.273428
+44	44	-0.156080	0.501666	0.497932	3931.321313	-1.328362
+45	45	0.156080	-0.501666	-0.497932	3931.321318	-1.328362
+46	46	0.390157	-0.529976	-0.058148	2616.035354	0.699977
+47	47	-0.390157	0.529976	0.058148	2616.035355	0.699977
+48	48	-0.321652	0.059908	0.114817	2613.343121	0.314677
+49	49	0.321652	-0.059908	-0.114817	2613.343122	0.314677
+50	50	0.344806	-0.388099	-0.616759	3263.251239	-0.096501
+51	51	-0.344807	0.388099	0.616759	3263.251239	-0.096501
+52	52	-0.096668	0.185491	1.140496	3312.135209	-0.784352
+53	53	0.096668	-0.185491	-1.140496	3312.135210	-0.784352
+54	54	0.653531	-0.083624	-0.190368	3278.598636	-1.157230
+55	55	-0.653531	0.083624	0.190368	3278.598635	-1.157230
+56	56	-0.217813	0.543358	0.186847	2634.705536	0.627376
+57	57	0.217813	-0.543358	-0.186847	2634.705536	0.627376
+58	58	-0.486712	0.516993	0.242368	2596.255810	-0.259725
+59	59	0.486712	-0.516993	-0.242368	2596.255810	-0.259725
+60	60	0.159227	-0.140214	-1.015342	2643.921567	-1.208293
+61	61	-0.159227	0.140214	1.015342	2643.921567	-1.208293
+62	62	0.249587	-0.213415	0.066588	1949.017723	-0.469026
+63	63	-0.249587	0.213415	-0.066588	1949.017723	-0.469026
+Electron States: | Wed Mar 19 07:03:58 2025
+
+64	64	0.649990	0.446267	0.564428	1268.297320	-1.580758
+65	65	-0.649990	-0.446267	-0.564428	1268.297320	-1.580758
+66	66	0.342805	-0.644911	-0.258101	1798.318110	-0.502593
+67	67	-0.342805	0.644911	0.258101	1798.318109	-0.502593
+68	68	0.153720	-0.431656	1.509357	1747.623620	-2.064193
+69	69	-0.153720	0.431656	-1.509357	1747.623620	-2.064193
+70	70	-0.979857	0.529405	0.066752	1783.407012	-1.600844
+71	71	0.979857	-0.529405	-0.066752	1783.407012	-1.600844
+72	72	-0.060983	-0.446278	-0.112811	2283.529173	-0.567125
+73	73	0.060983	0.446278	0.112811	2283.529171	-0.567125
+74	74	-1.183138	-0.432867	-0.171866	2088.043934	1.022644
+75	75	1.183138	0.432867	0.171866	2088.043935	1.022644
+76	76	-0.951891	-0.942304	0.143150	1990.987130	-0.544704
+77	77	0.951891	0.942304	-0.143150	1990.987134	-0.544704
+78	78	0.022334	-0.671454	0.233335	2083.625847	-2.483155
+79	79	-0.022334	0.671454	-0.233335	2083.625846	-2.483155
+80	80	-0.835051	-1.489621	-0.381443	2182.603616	-3.198320
+81	81	0.835051	1.489621	0.381443	2182.603617	-3.198320
+82	82	0.801052	-0.308752	-0.062239	1899.028967	-1.353137
+83	83	-0.801052	0.308752	0.062239	1899.028965	-1.353137
+84	84	0.484630	1.446482	-1.206661	2482.399550	2.215314
+85	85	-0.484630	-1.446482	1.206661	2482.399561	2.215314
+86	86	1.484768	1.716349	-1.001745	2515.393243	-1.821273
+87	87	-1.484768	-1.716349	1.001745	2515.393226	-1.821273
+88	88	1.783353	-2.125291	-0.099046	2589.724673	-1.887962
+89	89	-1.783353	2.125291	0.099046	2589.724682	-1.887962
+90	90	1.613988	-1.221180	0.013722	2183.429203	0.662300
+91	91	-1.613988	1.221180	-0.013722	2183.429218	0.662300
+92	92	0.326479	-0.043644	0.228780	2175.872117	0.257490
+93	93	-0.326479	0.043644	-0.228780	2175.872115	0.257490
+94	94	0.648441	0.711209	0.001341	2167.910280	-2.522274
+95	95	-0.648441	-0.711209	-0.001341	2167.910289	-2.522274
+96	96	1.382647	-1.123183	0.206709	2163.845667	-2.841479
+97	97	-1.382647	1.123183	-0.206709	2163.845707	-2.841479
+98	98	-0.410782	0.036727	0.631141	2422.213858	-0.484650
+99	99	0.410782	-0.036726	-0.631141	2422.213917	-0.484650
+100	100	0.444110	-0.356281	-0.774941	2376.896899	-2.324270
+101	101	-0.444110	0.356281	0.774941	2376.896953	-2.324270
+102	102	0.766960	1.369673	0.036445	2585.076802	2.976590
+103	103	-0.766960	-1.369673	-0.036445	2585.077008	2.976589
+104	104	0.673061	-0.680863	-1.306823	2737.802502	2.703400
+105	105	-0.673062	0.680865	1.306823	2737.802877	2.703402
+106	106	1.458707	0.418623	-0.506063	2640.548149	-1.085779
+107	107	-1.458707	-0.418622	0.506062	2640.548104	-1.085778
+108	108	-0.415594	0.285659	1.983881	2447.025698	-2.928366
+109	109	0.415594	-0.285660	-1.983881	2447.026979	-2.928367
+110	110	0.386231	-0.421342	-2.723590	2819.648526	-3.116042
+111	111	-0.386231	0.421342	2.723591	2819.648852	-3.116042
+112	112	0.423921	0.300117	0.570018	1953.900726	-1.205509
+113	113	-0.423921	-0.300117	-0.570019	1953.900873	-1.205509
+114	114	-0.298731	0.319784	-0.156923	2011.762508	-0.451303
+115	115	0.298732	-0.319783	0.156923	2011.765119	-0.451301
+116	116	-0.157570	0.142397	0.402832	2008.469749	-0.617092
+117	117	0.157571	-0.142396	-0.402833	2008.473205	-0.617095
+118	118	0.066793	0.001206	0.048944	2436.284246	-1.521967
+119	119	-0.066802	-0.001201	-0.048945	2436.282515	-1.521965
+120	120	-0.045195	0.068682	-0.373823	2430.509961	-1.109666
+121	121	0.045194	-0.068679	0.373829	2430.509085	-1.109665
+122	122	0.384154	0.262580	-0.230653	2896.021869	-0.967358
+123	123	-0.384146	-0.262565	0.230652	2896.024732	-0.967358
+124	124	0.314887	0.201765	-0.271482	2517.012171	-0.713504
+125	125	-0.314890	-0.201769	0.271487	2516.999862	-0.713520
+126	126	0.357285	0.339306	-0.200883	2521.411377	-1.586498
+127	127	-0.357246	-0.339343	0.200875	2521.410838	-1.586511
+
+Computing spinor BSE | Wed Mar 19 07:12:48 2025
+
+The number of electron-hole pairs in the exciton basis = 4096
+Ground state exciton has energy = 0.0650603320 (1.7703827176 eV) (0.0000000000 Imag)
+Compute excitonic spin expectation values | Wed Mar 19 07:16:58 2025
+
+Compute exciton orbital ang mom expectation values | Wed Mar 19 07:17:46 2025
+
+Compute excitonic spin-orbit expectation values | Wed Mar 19 07:18:39 2025
+
+Compute all excitonic states | Wed Mar 19 07:19:20 2025
+
+U^+ H = U^+HU | Wed Mar 19 07:28:00 2025
+
+Compute excitonic optical properties | Wed Mar 19 07:34:08 2025
+
+
+******************************************************************************
+
+Wed Mar 19 07:34:43 2025

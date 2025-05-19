@@ -1,0 +1,215 @@
+******************************************************************************
+
+RUNNING PROGRAM: FILTER DIAGONALIZATION
+This calculation began at: Wed Sep  4 05:25:28 2024
+
+******************************************************************************
+
+
+******************************************************************************
+
+1.	INITIALIZING JOB
+
+******************************************************************************
+
+Reading job specifications from input.par:
+
+	Grid parameters (preliminary):
+	------------------------------
+	nx = 142, ny = 142, nz = 144
+	dx = 0.5, dy = 0.5, dz = 0.5
+	ngrid = 2903616 nspin = 2
+	Nanocrystal COM will be centered at the origin
+
+	Pseudopotential options:
+	--------------------------
+	Strain dependent pseudopotential will NOT be calculated
+	Pseudopotential parameters will be interpolated based on NC geometry
+	Pseudopotentials are short ranged.
+	Crystal structure: unknown
+	Outmost material: unknown
+	Surface Cs atoms NOT rescaled for charge balancing
+
+	Parameters & counters for filter algorithm:
+	-------------------------------------------
+	nFilterCycles (# random initial states) = 32
+	statesPerFilter (# energy targets) = 32
+	nCheby = 5192
+	VBmin = -0.285, VBmax = -0.236
+	CBmin = -0.139, CBmax = -0.06
+	KEmax = 10 a.u.
+	fermiEnergy = -0.19 a.u.
+	setNumEnergyTargets flag on: n_targets_VB = 22 n_targets_CB = 10
+	Setting initial filter random seed to -123
+	Energy range will be approx'd using only local potential
+	Job will perform Ortho. and Diag. steps after Filtering.
+	printPsiFilt is on. psi-filt.dat and psi-filt.cube files will be printed
+	Orthogonalized wavefunctions will not be output to disk
+
+	Parameters for parallelization:
+	-------------------------------
+	nThreads (# OMP threads) = 128
+
+	Parameters for spin-orbit and non-local:
+	----------------------------------------
+	Spinor wavefunctions turned ON!
+	Spin-orbit coupling is ON!
+	Non-local potential is ON!
+	Rnlcut = 4.10067 Bohr
+	Wavefunctions are COMPLEX valued! complex_idx = 2
+
+	Flags for optional output:
+	--------------------------
+	Matrix elements of the potential will not be calculated
+	All eigenstates will be saved to disk regardless of variance
+	Hamiltonian timing specs will not be printed
+	Cube files of top 4 states (sigma_E_cut < 0.001) in VB & CB will be printed
+	Spin and Ang. Mom. statistics will not be computed
+
+	Flags for restarting computation:
+	---------------------------------
+	Filter will NOT restart if no eigenstates obtained after diag.
+	No checkpoint saves requested
+	No checkpoint specified for restart. Job will run in normal sequence.
+
+Reading atomic configuration from conf.par:
+	natoms = 783
+	n_atom_types = 3
+	the atoms are [ I Cs Pb ]
+	n_NL_atoms = 783
+
+Initializing the grid parameters:
+	Min. required box dimension for each direction (Bohr):
+	-----------------------------------------------------
+	xd = 70 yd = 70 zd = 70
+	The x_min = -35 and x_max 34.5
+	The y_min = -35 and y_max 34.5
+	The z_min = -35 and z_max 34.5
+
+	Final grid parameters:
+	----------------------
+	xd = 71.0 yd = 71.0 zd = 72.0
+	dx = 0.5 dy = 0.5 dz = 0.5 dv = 0.125 dr = 0.866025
+	nx = 142  ny = 142  nz = 144
+	ngrid = 2903616, nspin = 2, nspinngrid = 5807232
+
+Building the real-space and k-space grids:
+	Building the grid...
+	Count max no. grid points in Rnlcut of an atom
+	n_NL_gridpts = 2330
+
+Setting the filter energy targets:
+	Spacing between states in VB: 0.00222727 a.u.
+	Spacing between states in CB: 0.0079 a.u.
+
+	Energy target list:
+	-------------------
+	-0.282773
+	-0.280545
+	-0.278318
+	-0.276091
+	-0.273864
+	-0.271636
+	-0.269409
+	-0.267182
+	-0.264955
+	-0.262727
+	-0.2605
+	-0.258273
+	-0.256045
+	-0.253818
+	-0.251591
+	-0.249364
+	-0.247136
+	-0.244909
+	-0.242682
+	-0.240455
+	-0.238227
+	-0.236
+	-0.139
+	-0.1311
+	-0.1232
+	-0.1153
+	-0.1074
+	-0.0995
+	-0.0916
+	-0.0837
+	-0.0758
+	-0.0679
+
+Allocating memory for FFT, pot, psi, eig_vals...	done allocating memory.
+
+Initializing potentials...
+
+Local pseudopotential:
+	Reading atomic pseudopotentials...
+	potI_cubic.par potI_ortho.par potCs_cubic.par potCs_ortho.par potPb_cubic.par potPb_ortho.par 
+	Interpolating pseudopotential parameters
+	Constructing total pseudopotential on the grid...
+	Computing interpolated cubic/ortho potential
+	Vmin = -1.30393 Vmax = 0.746054 dV = 2.04998 
+
+Spin-orbit pseudopotential:
+	SO projectors generated.
+
+Non-local pseudopotential:
+	NL projectors generated.
+
+
+******************************************************************************
+
+2. CALCULATING HAMILTONIAN ENERGY RANGE...
+
+******************************************************************************
+
+Approximating energy range of Hamiltonian as [Vmin, Vmax + KE_max]
+Emin = -0.964717, Emax = 16.4953, dE = 17.46
+
+done calculate energy range, CPU time (sec) 0.000113, wall run time (sec) 0
+
+
+******************************************************************************
+
+3. GENERATING COEFFICIENTS
+
+******************************************************************************
+
+Calculating Newton interpolation coefficients for filter functions.
+ncheby = 5192 dt = 14148.2 dE = 17.46
+
+
+******************************************************************************
+
+4. STARTING FILTERING
+
+******************************************************************************
+
+Energy width, sigma, of filter function = 0.00594476 a.u.
+Suggested max span of spectrum for filtering = 0.190232 a.u.
+Requested span of spectrum to filter = 0.117873 a.u.
+Starting filtering loop
+
+	Currently working on iteration 1 of filtering cycle
+	  (~128 states)
+
+	  [                ]   0% | Wed Sep  4 05:26:55 2024
+
+	  [####            ]  25% | Wed Sep  4 06:39:08 2024
+
+	  [########        ]  50% | Wed Sep  4 07:51:37 2024
+
+	  [############    ]  75% | Wed Sep  4 09:04:19 2024
+
+	  [############### ] 100% | Wed Sep  4 10:16:29 2024
+
+	Currently working on iteration 2 of filtering cycle
+	  (~256 states)
+
+	  [                ]   0% | Wed Sep  4 10:16:33 2024
+
+	  [####            ]  25% | Wed Sep  4 11:26:55 2024
+
+	  [########        ]  50% | Wed Sep  4 12:38:17 2024
+
+	  [############    ]  75% | Wed Sep  4 13:47:57 2024
+

@@ -1,0 +1,233 @@
+******************************************************************************
+
+RUNNING PROGRAM: FILTER DIAGONALIZATION
+This calculation began at: Fri Mar  7 20:58:12 2025
+
+Printing from root node 0
+******************************************************************************
+
+
+******************************************************************************
+
+1.	INITIALIZING JOB | Fri Mar  7 20:58:12 2025
+
+
+******************************************************************************
+
+Reading job specs from input.par:
+
+	Grid parameters (preliminary):
+	------------------------------
+	nx = 116, ny = 116, nz = 116
+	dx = 0.5, dy = 0.5, dz = 0.5
+	ngrid = 1560896 nspin = 2
+	Nanocrystal COM will be centered at the origin
+
+	Pseudopotential options:
+	--------------------------
+	Strain dependent pseudopotential will NOT be calculated
+	Pseudopotential parameters will not be interpolated
+	Pseudopotentials are short ranged.
+	Crystal structure: unknown
+	Outmost material: unknown
+	Surface Cs atoms NOT rescaled for charge balancing
+	Projector functions will be generated on the fly
+
+	Parameters & counters for filter algorithm:
+	-------------------------------------------
+	nFilterCycles (# random initial states) = 64
+	nFilterPerRank (# states per MPI rank) = 2
+	mStatesPerFilter (# energy targets) = 24
+	nCheby = 4096
+	VBmin = -0.275, VBmax = -0.23
+	CBmin = -0.15, CBmax = -0.12
+	KEmax = 20 a.u.
+	fermiEnergy = -0.19 a.u.
+	setNumEnergyTargets flag on: n_targets_VB = 14 n_targets_CB = 10
+	Random seed will be generated based on clock at runtime
+	Energy range will be approx'd using only local potential
+	printPsiFilt is on. psi-filt.dat and psi-filt.cube files will be printed
+	Orthogonalized wavefunctions will not be output to disk
+	FFT wisdom stored in directory: 
+
+	Parameters for parallelization:
+	-------------------------------
+	MPI_SIZE (# MPI ranks) = 32
+	nThreads (# OMP threads/rank) = 128
+	ham_threads = 16
+
+	Parameters for spin-orbit and non-local:
+	----------------------------------------
+	Spinor wavefunctions turned ON!
+	Spin-orbit coupling is ON!
+	Non-local potential is ON!
+	Rnlcut = 4.10067 Bohr
+	Wavefunctions are COMPLEX valued! complex_idx = 2
+	Wavefunctions will NOT be time reversed before ortho!
+	  t_rev_factor = 1
+
+	Flags for optional output:
+	--------------------------
+	Matrix elements of the potential will not be calculated
+	All eigenstates will be saved to disk regardless of variance
+	Hamiltonian timing specs will be printed
+	Cube files of top 4 states (sigma_E_cut < 0.001) in VB & CB will be printed
+	Spin and Ang. Mom. statistics will not be computed
+
+	Flags for restarting computation:
+	---------------------------------
+	Filter will NOT restart if no eigenstates obtained after diag.
+	No checkpoint saves requested
+	Filter will restart from checkpoint 0
+
+Reading atomic coords from conf.par:
+	natoms = 304
+	n_atom_types = 2
+	the atoms are [   I  Pb ]
+	n_NL_atoms = 304
+
+Initializing the grid parameters:
+	Min. required box dimension for each direction (Bohr):
+	-----------------------------------------------------
+	xd = 58.00 yd = 58.00 zd = 58.00
+	The x_min = -29 and x_max 28.5
+	The y_min = -29 and y_max 28.5
+	The z_min = -29 and z_max 28.5
+
+	Final grid parameters:
+	----------------------
+	xmin = -29.000000 ymin = -29.000000 zmin = -29.000000
+	dx = 0.5 dy = 0.5 dz = 0.5 dv = 0.125 dr = 0.866025
+	nx = 116  ny = 116  nz = 116
+	ngrid = 1560896, nspin = 2, nspinngrid = 3121792
+
+Building the r- and k-space grids:
+	Building the grid...
+	Count max no. grid points in Rnlcut of an atom
+	n_NL_gridpts = 2328
+
+Setting the filter energy targets:
+	Spacing between states in VB: 0.00321429 a.u.
+	Spacing between states in CB: 0.003 a.u.
+
+	Energy target list:
+	-------------------
+	-0.271786
+	-0.268571
+	-0.265357
+	-0.262143
+	-0.258929
+	-0.255714
+	-0.2525
+	-0.249286
+	-0.246071
+	-0.242857
+	-0.239643
+	-0.236429
+	-0.233214
+	-0.23
+	-0.15
+	-0.147
+	-0.144
+	-0.141
+	-0.138
+	-0.135
+	-0.132
+	-0.129
+	-0.126
+	-0.123
+
+Allocating memory for pot, psi, eig_vals...
+	done allocating memory.
+
+Initializing potentials...
+
+Local pseudopotential:
+	Reading atomic pseudopotentials...
+	potI.par potPb.par 
+	Reading SO & non-local pot parameters
+	Constructing total pseudopotential on the grid...
+	Vmin = -1.2639 Vmax = 0.625996 dV = 1.88989 
+
+Spin-orbit pseudopotential:
+	SO projectors generated.
+
+Non-local pseudopotential:
+	NL projectors generated.
+
+
+******************************************************************************
+
+2. CALCULATING HAMILTONIAN ENERGY RANGE | Fri Mar  7 21:00:59 2025
+
+
+******************************************************************************
+
+Approximating energy range of Hamiltonian as [Vmin, Vmax + KE_max]
+Emin = -1.03668, Emax = 28.3512, dE = 29.3879
+
+Done w calc energy range, CPU time (sec) 0.001489, wall run time (sec) 0
+
+
+******************************************************************************
+
+3. GENERATING COEFFICIENTS | Fri Mar  7 21:00:59 2025
+
+
+******************************************************************************
+
+  ncheby = 4096 dt = 3108.16 dE = 29.3879
+  Energy width, sigma, of filter function = 0.0126833 a.u.
+  Suggested max span of spectrum for filtering = 0.3044 a.u.
+  Requested span of spectrum to filter = 0.0687857 a.u.
+
+Initializing random filter states
+
+Timing Hamiltonian operator... | Fri Mar  7 21:01:02 2025
+
+	Kinetic energy: 18.86 (msec)
+	Spin-Orbit potential: 25.48 (msec)
+	Non-local potential: 19.81 (msec)
+	Local potential: 4.082 (msec)
+Done timing Hamiltonian | Fri Mar  7 21:01:04 2025
+
+
+
+******************************************************************************
+
+4. RUN FILTER CYCLE | Fri Mar  7 21:01:04 2025
+
+
+******************************************************************************
+
+  4.1 Running filter cycle
+  Random psi 1 / 2 | Fri Mar  7 21:01:04 2025
+
+	  [                ]   0% | Fri Mar  7 21:01:04 2025
+
+	  [####            ]  25% | Fri Mar  7 21:03:28 2025
+
+	  [########        ]  50% | Fri Mar  7 21:05:53 2025
+
+	  [############    ]  75% | Fri Mar  7 21:08:17 2025
+
+	  [############### ] 100% | Fri Mar  7 21:10:41 2025
+
+  Random psi 2 / 2 | Fri Mar  7 21:10:42 2025
+
+	  [                ]   0% | Fri Mar  7 21:10:42 2025
+
+	  [####            ]  25% | Fri Mar  7 21:13:07 2025
+
+	  [########        ]  50% | Fri Mar  7 21:15:31 2025
+
+	  [############    ]  75% | Fri Mar  7 21:17:56 2025
+
+	  [############### ] 100% | Fri Mar  7 21:20:19 2025
+
+
+  4.3 Normalizing filtered states
+
+  4.4 Computing the energies of all filtered states
+
+done calculating filter, CPU time (sec) 18635.6, wall run time (sec) 1171

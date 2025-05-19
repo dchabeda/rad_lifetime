@@ -1,0 +1,673 @@
+******************************************************************************
+
+RUNNING PROGRAM: BETHE-SALPETHER
+This calculation began at: Mon Apr  7 10:22:21 2025
+
+******************************************************************************
+
+
+******************************************************************************
+
+1.	INITIALIZING JOB | Mon Apr  7 10:22:22 2025
+
+
+******************************************************************************
+
+Reading UNSAFE input from unsafe_input.par:
+Done reading in unsafe_input.par
+
+xmin = -71.5 ymin = -71.5 zmin = -71.5
+nx = 286 ny = 286 nz = 286
+dx = 0.5 dy = 0.5 dz = 0.5
+grid->dv = 0.125 
+natoms = 5687
+mn_states_tot = 160
+Done with function read_unsafe_input
+
+Reading BSE job specifications from input.par:
+
+	Grid parameters from filter job:
+	----------------------------------
+	nx = 286, ny = 286, nz = 286
+	dx = 0.5, dy = 0.5, dz = 0.5
+	ngrid = 23393656 nspin = 2 nspinngrid = 46787312
+
+	Parameters & counters for BSE algorithm:
+	-------------------------------------------
+	maxHoleStates (# h+ in basis) = 80
+	maxElecStates (# e- in basis) = 80
+	sigmaECut = 0.0001 a.u.
+	DeltaE_hole = 0.04 a.u.  DeltaE_elec = 0.04 a.u.
+	KEmax = 20 a.u.
+	fermiEnergy = -0.19 a.u.
+
+	Dielectric screening options:
+	-------------------------------
+	epsX = 6.1
+	epsY = 6.1
+	epsZ = 6.1
+	Pseudopotentials were short ranged.
+
+	Parameters for two-component representation:
+	----------------------------------------------
+	Spinor wavefunctions turned ON!
+	Spin-orbit coupling is ON!
+	Non-local potential is ON!
+	Wavefunctions are COMPLEX valued! complex_idx = 2
+
+	Flags for optional output:
+	----------------------------
+	Computing spin-allowed sector of BSE matrix -> bright states
+	Timing specs will NOT be printed
+	Fixed point densities will NOT be printed
+	Spin and Ang. Mom. statistics will NOT be computed
+
+	Parameters for parallelization:
+	-------------------------------
+	nThreads (# OMP threads) = 64
+
+	Flags for restarting computation:
+	-----------------------------------
+	No checkpoint saves requested
+	No checkpoint specified for restart. Job will run in normal sequence.
+
+Setting quasiparticle basis indices:
+
+	Total # of filtered hole eigenstates = 80
+	Total # of filtered electron eigenstates = 80
+	The filter eval.dat index of the HOMO state = 79  LUMO state = 80
+
+	Unconstrained energy span of holes, 0.0117 a.u. (0.32 eV) < desired span = 0.04 a.u. (1.1 eV)
+	**Increase size of VB basis states to reach desired result**
+	Unconstrained energy span of elecs, 0.0106 a.u. (0.29 eV) < desired span = 0.04 a.u. (1.1 eV)
+	**Increase size of CB basis states to reach desired result**
+
+	Selected # of filtered h+ qp basis states = 80
+	Selected # of filtered e- qp basis states = 80
+	Total number of quasiparticle states, n_qp = 160
+	The BSEeval.par index of the HOMO state = 79  LUMO state = 80
+	The HOMO energy = -0.227892 a.u. -6.201 eV
+	The LUMO energy = -0.159224 a.u. -4.333 eV
+	Fundamental gap = 0.0686678 a.u. 1.869 eV
+
+Reading quasiparticle basis wavefunctions:
+
+Computing spin composition of quasiparticle spinors | Mon Apr  7 10:25:29 2025
+
+
+ Time for computing all spins: 2.400993
+
+
+******************************************************************************
+
+4.	COMPUTING SINGLE-PARTICLE PROPERTIES | Mon Apr  7 10:25:32 2025
+
+
+******************************************************************************
+Allocating memory for single particle matrix elements... done
+
+Electric transition dipole moment...
+Duration of computing dipole: 73.338171 s (0.011459 s per transition)
+
+Magnetic transition dipole moment...
+Duration of computing mag dipole: 156.908292 s (0.024517 s per transition)
+
+
+******************************************************************************
+
+2.	COMPUTING ELECTRON-HOLE INTERACTION POTENTIALS | Mon Apr  7 10:29:22 2025
+
+
+******************************************************************************
+Allocating memory for hartree, direct, and exchange potentials... done.
+Computing interaction potential on grid...
+	Bare Coulomb potential, v(r, r')...
+	Screened Coulomb potential, W(r, r')...
+  Done generating e-h interaction potential.
+
+
+******************************************************************************
+
+3.	COMPUTING ELEC-HOLE INTERACTION KERNEL | Mon Apr  7 10:29:23 2025
+
+
+******************************************************************************
+
+The number of electron-hole pairs in the exciton basis = 6400
+Computing complex e-h kernel
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 0 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 1 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 0
+Direct ncycles = 98
+Starting at ab = 0 on even rank 0 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 60 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 34 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 30 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 61 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 35 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 31 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 52 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 53 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 18 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 19 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 22 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 23 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 8 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 26 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 9 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 27 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 24 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 32 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 25 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 33 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 28 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 29 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 42 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 43 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 46 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 47 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 36 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 37 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 15
+Starting at ab = 15 on even rank 15 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 30
+Starting at ab = 30 on even rank 30 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 12 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 13 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 40 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 50 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 2 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 3 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 41 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 20 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 51 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 26
+Starting at ab = 26 on even rank 26 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 17
+Starting at ab = 17 on even rank 17 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 21 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 4 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 54 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 5 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 55 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 6 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 23
+Starting at ab = 23 on even rank 23 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 58 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 39 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 10 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 4
+Starting at ab = 4 on even rank 4 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 7 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 13
+Starting at ab = 13 on even rank 13 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 59 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 38 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 11 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 11
+Starting at ab = 11 on even rank 11 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 15 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 14 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 48 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 9
+Starting at ab = 9 on even rank 9 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 16 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 56 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 49 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 17 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 57 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 16
+Starting at ab = 16 on even rank 16 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 21
+Starting at ab = 21 on even rank 21 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 14
+Starting at ab = 14 on even rank 14 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 12
+Starting at ab = 12 on even rank 12 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 44 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 45 | Mon Apr  7 10:29:25 2025
+
+
+Computing screened direct matrix, K^d_(ab,ij) on rank 62 | Mon Apr  7 10:29:25 2025
+
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 63 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 18
+Starting at ab = 18 on even rank 18 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 10
+Starting at ab = 10 on even rank 10 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 29
+Starting at ab = 29 on even rank 29 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 3
+Starting at ab = 3 on even rank 3 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 25
+Starting at ab = 25 on even rank 25 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 5
+Starting at ab = 5 on even rank 5 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 2
+Starting at ab = 2 on even rank 2 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 19
+Starting at ab = 19 on even rank 19 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 20
+Starting at ab = 20 on even rank 20 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 27
+Starting at ab = 27 on even rank 27 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 6
+Starting at ab = 6 on even rank 6 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 1
+Starting at ab = 1 on even rank 1 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 7
+Starting at ab = 7 on even rank 7 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 24
+Starting at ab = 24 on even rank 24 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 28
+Starting at ab = 28 on even rank 28 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 8
+Starting at ab = 8 on even rank 8 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 22
+Starting at ab = 22 on even rank 22 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining workload when a < b, abtot = 3160 | MPI even rank 31
+Starting at ab = 31 on even rank 31 | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 0
+Exchange ncycles = 200
+Starting exchange integrals | Mon Apr  7 10:29:25 2025
+
+Exchange: 	  [                ]   0% | Mon Apr  7 10:29:25 2025
+
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 1
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 3
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 6
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 4
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 5
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 14
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 7
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 2
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 8
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 16
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 10
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 17
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 18
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 13
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 29
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 30
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 22
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 19
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 11
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 9
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 25
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 15
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 23
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 27
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 12
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 20
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 24
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 26
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 31
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 21
+Direct inner loop workload size: 6400, Using 64 threads with chunk size 8
+Determining the workload for aitot = 6400 on MPI odd rank 28
+Computing a < b segment of direct mat | Mon Apr  7 10:29:25 2025
+
+Direct: 	  [                ]   0% | Mon Apr  7 10:31:25 2025
+
+Exchange: 	  [####            ]  26% | Mon Apr  7 10:54:44 2025
+
+Direct: 	  [####            ]  26% | Mon Apr  7 11:09:26 2025
+
+Exchange: 	  [########        ]  51% | Mon Apr  7 11:44:46 2025
+
+Direct: 	  [########        ]  51% | Mon Apr  7 11:49:10 2025
+
+Direct: 	  [############    ]  77% | Mon Apr  7 12:30:29 2025
+
+Workload for MPI even rank 20, ij_tot = 3240
+Workload for MPI even rank 7, ij_tot = 3240
+Workload for MPI even rank 30, ij_tot = 3240
+Done with a == b segment of direct on rank 20; duration = 87.6202 s (1.46034 m)
+Workload for MPI even rank 6, ij_tot = 3240
+Done with a == b segment of direct on rank 30; duration = 81.495 s (1.35825 m)
+Workload for MPI even rank 21, ij_tot = 3240
+Done with a == b segment of direct on rank 7; duration = 121.155 s (2.01925 m)
+Done with a == b segment of direct on rank 6; duration = 130.116 s (2.16859 m)
+Done with a == b segment of direct on rank 21; duration = 84.3041 s (1.40507 m)
+Workload for MPI even rank 2, ij_tot = 3240
+Workload for MPI even rank 26, ij_tot = 3240
+Workload for MPI even rank 11, ij_tot = 3240
+Workload for MPI even rank 1, ij_tot = 3240
+Done with a == b segment of direct on rank 26; duration = 96.2122 s (1.60354 m)
+Done with a == b segment of direct on rank 2; duration = 137.958 s (2.2993 m)
+Workload for MPI even rank 13, ij_tot = 3240
+Workload for MPI even rank 15, ij_tot = 3240
+Workload for MPI even rank 12, ij_tot = 3240
+Done with a == b segment of direct on rank 11; duration = 124.051 s (2.06751 m)
+Done with a == b segment of direct on rank 1; duration = 128.423 s (2.14038 m)
+Workload for MPI even rank 28, ij_tot = 3240
+Workload for MPI even rank 16, ij_tot = 3240
+Workload for MPI even rank 9, ij_tot = 3240
+Done with a == b segment of direct on rank 13; duration = 119.809 s (1.99681 m)
+Done with a == b segment of direct on rank 15; duration = 125.896 s (2.09826 m)
+Done with a == b segment of direct on rank 28; duration = 85.0235 s (1.41706 m)
+Workload for MPI even rank 19, ij_tot = 3240
+Done with a == b segment of direct on rank 16; duration = 90.7063 s (1.51177 m)
+Done with a == b segment of direct on rank 12; duration = 137.91 s (2.2985 m)
+Workload for MPI even rank 5, ij_tot = 3240
+Workload for MPI even rank 31, ij_tot = 3240
+Done with a == b segment of direct on rank 9; duration = 121.86 s (2.031 m)
+Done with a == b segment of direct on rank 19; duration = 90.7588 s (1.51265 m)
+Done with a == b segment of direct on rank 31; duration = 87.7388 s (1.46231 m)
+Done with a == b segment of direct on rank 5; duration = 132.797 s (2.21328 m)
+Workload for MPI even rank 8, ij_tot = 3240
+Workload for MPI even rank 14, ij_tot = 3240
+Workload for MPI even rank 25, ij_tot = 3240
+Workload for MPI even rank 4, ij_tot = 3240
+Workload for MPI even rank 3, ij_tot = 3240
+Done with a == b segment of direct on rank 25; duration = 92.0842 s (1.53474 m)
+Workload for MPI even rank 27, ij_tot = 3240
+Done with a == b segment of direct on rank 8; duration = 142.566 s (2.3761 m)
+Done with a == b segment of direct on rank 14; duration = 142.05 s (2.3675 m)
+Done with a == b segment of direct on rank 4; duration = 148.403 s (2.47339 m)
+Done with a == b segment of direct on rank 3; duration = 127.529 s (2.12548 m)
+Done with a == b segment of direct on rank 27; duration = 80.9327 s (1.34888 m)
+Workload for MPI even rank 24, ij_tot = 3240
+Direct: 	  [############### ]  99% | Mon Apr  7 13:06:56 2025
+
+Done with a == b segment of direct on rank 24; duration = 83.831 s (1.39718 m)
+Done with a < b segment of direct; duration = 9550.5 s (159.175 m)
+Computing a == b segment of direct mat | Mon Apr  7 13:08:35 2025
+
+Workload for MPI even rank 0, ij_tot = 3240
+Workload for MPI even rank 22, ij_tot = 3240
+Done with a == b segment of direct on rank 22; duration = 104.133 s (1.73556 m)
+Done with a == b segment of direct on rank 0; duration = 147.113 s (2.45189 m)
+Workload for MPI even rank 29, ij_tot = 3240
+Done with a == b segment of direct on rank 29; duration = 88.707 s (1.47845 m)
+Exchange: 	  [############    ]  76% | Mon Apr  7 13:15:38 2025
+
+Workload for MPI even rank 17, ij_tot = 3240
+Workload for MPI even rank 18, ij_tot = 3240
+Done with a == b segment of direct on rank 17; duration = 103.678 s (1.72797 m)
+Done with a == b segment of direct on rank 18; duration = 116.734 s (1.94556 m)
+Workload for MPI even rank 23, ij_tot = 3240
+Workload for MPI even rank 10, ij_tot = 3240
+Done with a == b segment of direct on rank 23; duration = 106.687 s (1.77811 m)
+Done with a == b segment of direct on rank 10; duration = 156.277 s (2.60461 m)
+Done with exchange integrals on rank 13; duration = 13650.3 s (227.506 m)
+Done with exchange integrals on rank 9; duration = 14134.3 s (235.572 m)
+Done with exchange integrals on rank 21; duration = 14215.9 s (236.931 m)
+Done with exchange integrals on rank 24; duration = 14361.6 s (239.361 m)
+Done with exchange integrals on rank 16; duration = 14455.2 s (240.92 m)
+Done with exchange integrals on rank 17; duration = 14581 s (243.017 m)
+Done with exchange integrals on rank 2; duration = 14709.6 s (245.16 m)
+Done with exchange integrals on rank 27; duration = 14749.3 s (245.822 m)
+Done with exchange integrals on rank 19; duration = 14820 s (247.001 m)
+Done with exchange integrals on rank 15; duration = 14828.5 s (247.141 m)
+Done with exchange integrals on rank 28; duration = 14839.6 s (247.327 m)
+Done with exchange integrals on rank 7; duration = 14848.2 s (247.471 m)
+Done with exchange integrals on rank 12; duration = 14868.8 s (247.813 m)
+Done with exchange integrals on rank 6; duration = 14984.5 s (249.741 m)
+Done with exchange integrals on rank 3; duration = 15005.2 s (250.087 m)
+Done with exchange integrals on rank 30; duration = 15012.4 s (250.206 m)
+Exchange: 	  [############### ] 100% | Mon Apr  7 14:39:44 2025
+
+Done with exchange integrals on rank 0; duration = 15019.5 s (250.325 m)
+Done with exchange integrals on rank 29; duration = 15247.3 s (254.122 m)
+Done with exchange integrals on rank 4; duration = 15254.3 s (254.239 m)
+Done with exchange integrals on rank 31; duration = 15296.9 s (254.948 m)
+Done with exchange integrals on rank 22; duration = 15300 s (255 m)
+Done with exchange integrals on rank 20; duration = 15303.5 s (255.059 m)
+Done with exchange integrals on rank 18; duration = 15343.1 s (255.718 m)
+Done with exchange integrals on rank 8; duration = 15381.5 s (256.358 m)
+Done with exchange integrals on rank 5; duration = 15426.8 s (257.113 m)
+Done with exchange integrals on rank 25; duration = 15450.5 s (257.508 m)
+Done with exchange integrals on rank 14; duration = 15453.2 s (257.553 m)
+Done with exchange integrals on rank 10; duration = 15621.6 s (260.359 m)
+Done with exchange integrals on rank 26; duration = 15778.1 s (262.969 m)
+Done with exchange integrals on rank 11; duration = 15956.8 s (265.947 m)
+Done with exchange integrals on rank 1; duration = 16232 s (270.534 m)
+Done with exchange integrals on rank 23; duration = 17121.9 s (285.366 m)
+Successfully reduced exchange mat from odd ranks | Mon Apr  7 15:14:47 2025
+
+
+
+Successfully reduced direct mat from even ranks | Mon Apr  7 15:14:47 2025
+
+Successfully sent exchange mat to mpi_rank 0 | Mon Apr  7 15:14:48 2025
+
+
+Ground state exciton has energy = 0.06481 a.u. | 1.76344 eV (-0.00000 Imag)
+
+
+******************************************************************************
+
+  -  COMPUTING XTON OPTICAL PROPERTIES | Mon Apr  7 15:25:42 2025
+
+
+******************************************************************************
+
+
+******************************************************************************
+
+DONE WITH PROGRAM: BETHE-SALPETHER
+This calculation ended at: Mon Apr  7 15:25:46 2025
+
+Total job CPU time (sec) 5.782e+05, wall run time (sec) 1.82e+04
+******************************************************************************

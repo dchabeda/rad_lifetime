@@ -1,0 +1,102 @@
+Wed Feb 26 18:21:47 2025
+
+******************************************************************************
+
+ist->nx = 256	ist->dx = 0.500000
+ist->ny = 260	ist->dy = 0.500000
+ist->nz = 260	ist->dz = 0.500000
+par->epsx = 6.1 par->epsy = 6.1 par->epsz = 6.1
+fermiEnergy = -0.19
+The number of openMP threads used = 128
+Total # of filtered hole eigenstates = 95
+Total # of filtered electron eigenstates = 94
+The eval.par index of the HOMO state = 139
+The eval.par index of the LUMO state = 140
+The HOMO energy = -0.22788057 -6.20094937
+The LUMO energy = -0.15943158 -4.33835640
+Fundamental gap = 0.0684489945 1.8625929695
+The total number of atoms = 4300
+Number of grid points used: nx = 256  ny = 260  nz = 260
+Length of pseudopotential files, npot = 8192
+Kinetic energy maximum = 10.0000
+Dielectric Constant: epsx = 6.1000 epsy = 6.1000 epsz = 6.1000
+Maximum sigma for an eigenstate, deps = 0.0001
+Energy windows, electrons = 0.2000 holes = 0.1000
+The number of hole eigenstates within 0.1000 of the HOMO energy = 95
+The number of electron eigenstates within 0.2000 of the LUMO energy = 94
+Total number of carrier states, ms = 189
+QD (minimum) dimensions: xd = 64.00 yd = 65.00 zd = 65.00
+Final Box Dimensions: xd = 64 yd = 65 zd = 65
+Gamma = 0.054688
+Grid point spacing: dx = 0.5000 dy = 0.5000 dz = 0.5000 dv = 0.125000 dr = 0.866025
+gamma = 0.0546875  gammaeps = 0.135068
+sqrtaveps = 2.46982
+grid->dkx = 0.0490874 grid->dky = 0.0483322 grid->dkz = 0.0483322
+ngrid_1 = 5.77848e-08
+The index of lowest energy occupied level used = 33
+allocating memory for 95 hole and 94 electron states
+closed ppsifreeing evalindex
+freeing psihomo
+freeing psilumo
+Number of hole eigenstates used in the BSE calculation = 8
+Number of electron eigenstates used in the BSE calculation =  8
+Total number of eigenstates used in the BSE calculation = 16
+
+Computing spin composition of qp spinors | Wed Feb 26 18:22:25 2025
+
+Starting calculation of BSE kernel | Wed Feb 26 18:22:26 2025
+
+Calculating direct matrix | Wed Feb 26 18:22:26 2025
+
+	  [                ]   0% | Wed Feb 26 18:22:43 2025
+
+	  [######          ]  38% | Wed Feb 26 18:23:22 2025
+
+	  [############    ]  75% | Wed Feb 26 18:23:57 2025
+
+	  [##############  ]  88% | Wed Feb 26 18:24:08 2025
+
+  Done computing direct mat
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 0
+Calculating exchange matrix | Wed Feb 26 18:24:09 2025
+
+	  [                ]   0% | Wed Feb 26 18:24:23 2025
+
+	  [######          ]  38% | Wed Feb 26 18:24:59 2025
+
+	  [############    ]  75% | Wed Feb 26 18:25:35 2025
+
+	  [##############  ]  88% | Wed Feb 26 18:25:46 2025
+
+  Done computing exchange mat
+
+Computing angular momentum elements | Wed Feb 26 18:25:46 2025
+
+Hole States:
+0	0	0.452190	0.181123	-0.325728	3393.126412	0.308737
+1	1	-0.373424	-0.209358	0.686645	3293.949205	0.502110
+2	2	0.500043	0.015436	-0.061075	3135.969941	-0.295214
+3	3	-0.581449	0.003266	0.102115	3354.161811	-0.028155
+4	4	-0.003184	-0.628032	-0.120549	3372.162264	-0.197454
+5	5	0.105103	0.828942	-0.034519	3401.108725	-0.171178
+6	6	0.331366	-0.172588	-0.162042	3137.491688	-0.505126
+7	7	-0.369007	0.060019	0.084386	3093.644381	-0.311606
+Electron States:
+8	8	-0.320534	0.291080	0.036408	3201.389407	-0.448953
+9	9	0.399764	-0.282002	-0.172715	3129.043983	0.097121
+10	10	-0.020500	-0.110960	0.011891	3373.365505	-0.262532
+11	11	-0.190105	0.140959	0.733919	3336.535793	-0.683222
+12	12	-0.275919	0.123443	0.075166	3190.034212	-0.042635
+13	13	0.525314	-0.249678	-0.951270	3146.936506	0.154496
+14	14	0.479887	-0.078562	0.065454	3190.692393	1.254098
+15	15	-0.466069	0.060084	-0.419970	3190.455606	1.215194
+
+Computing spinor BSE | Wed Feb 26 18:28:22 2025
+
+The number of electron-hole pairs in the exciton basis = 64
+Ground state exciton has energy = 0.0650468959 (1.7700171040 eV) (-0.0000000000 Imag)
+
+******************************************************************************
+
+Wed Feb 26 18:28:23 2025

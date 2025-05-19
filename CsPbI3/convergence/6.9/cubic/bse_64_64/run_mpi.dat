@@ -1,0 +1,146 @@
+Mon Mar 17 14:26:27 2025
+
+******************************************************************************
+
+ist->nx = 280	ist->dx = 0.500000
+ist->ny = 280	ist->dy = 0.500000
+ist->nz = 280	ist->dz = 0.500000
+par->epsx = 6.1 par->epsy = 6.1 par->epsz = 6.1
+...reading optionalInput.par
+Job will stop after computing Coulomb kernel.
+fermiEnergy = -0.19
+The number of openMP threads used = 64
+Total # of filtered hole eigenstates = 129
+Total # of filtered electron eigenstates = 112
+The eval.par index of the HOMO state = 129
+The eval.par index of the LUMO state = 130
+The HOMO energy = -0.23031653 -6.26723521
+The LUMO energy = -0.15722618 -4.27834458
+Fundamental gap = 0.0730903456 1.9888906290
+The total number of atoms = 5687
+Number of grid points used: nx = 280  ny = 280  nz = 280
+Length of pseudopotential files, npot = 8192
+Kinetic energy maximum = 10.0000
+Dielectric Constant: epsx = 6.1000 epsy = 6.1000 epsz = 6.1000
+Maximum sigma for an eigenstate, deps = 0.0001
+Energy windows, electrons = 0.2000 holes = 0.1000
+The number of hole eigenstates within 0.1000 of the HOMO energy = 129
+The number of electron eigenstates within 0.2000 of the LUMO energy = 112
+Total number of carrier states, ms = 241
+QD (minimum) dimensions: xd = 70.00 yd = 70.00 zd = 70.00
+Final Box Dimensions: xd = 70 yd = 70 zd = 70
+Gamma = 0.050000
+Grid point spacing: dx = 0.5000 dy = 0.5000 dz = 0.5000 dv = 0.125000 dr = 0.866025
+gamma = 0.05  gammaeps = 0.123491
+sqrtaveps = 2.46982
+grid->dkx = 0.0448799 grid->dky = 0.0448799 grid->dkz = 0.0448799
+ngrid_1 = 4.55539e-08
+The index of lowest energy occupied level used = 1
+allocating memory for 129 hole and 112 electron states
+closed ppsifreeing evalindex
+freeing psihomo
+freeing psilumo
+Number of hole eigenstates used in the BSE calculation = 64
+Number of electron eigenstates used in the BSE calculation =  64
+Total number of eigenstates used in the BSE calculation = 128
+
+Computing spin composition of qp spinors | Mon Mar 17 14:29:16 2025
+
+Starting calculation of BSE kernel | Mon Mar 17 14:30:21 2025
+
+Determining the workload for abtot = 4096 on MPI even rank 2
+even rank 2 sqrt even/size = 0.707107
+even rank 2 start = 2
+even rank 2 end = 4096
+Calculating screened direct matrix, K^d_ab,ij on rank 2 | Mon Mar 17 14:30:25 2025
+
+Determining the workload for abtot = 4096 on MPI even rank 0
+even rank 0 sqrt even/size = 0
+even rank 0 start = 0
+even rank 0 end = 4096
+Number of direct mat cycles = 4096
+Calculating screened direct matrix, K^d_ab,ij on rank 0 | Mon Mar 17 14:30:25 2025
+
+Determining the workload for abtot = 4096 on MPI even rank 1
+even rank 1 sqrt even/size = 0.5
+even rank 1 start = 1
+even rank 1 end = 4096
+Calculating screened direct matrix, K^d_ab,ij on rank 1 | Mon Mar 17 14:30:25 2025
+
+Determining the workload for aitot = 4096 on MPI odd rank 2
+odd rank 2 sqrt odd/size = 0.707107
+odd rank 2 start = 2
+odd rank 2 end = 3547
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 5 | Mon Mar 17 14:30:25 2025
+ 
+Determining the workload for abtot = 4096 on MPI even rank 3
+even rank 3 sqrt even/size = 0.866025
+even rank 3 start = 3
+even rank 3 end = 4096
+Calculating screened direct matrix, K^d_ab,ij on rank 3 | Mon Mar 17 14:30:25 2025
+
+Determining the workload for aitot = 4096 on MPI odd rank 0
+odd rank 0 sqrt odd/size = 0
+odd rank 0 start = 0
+odd rank 0 end = 2048
+Number of exchange mat cycles = 2048
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 1 | Mon Mar 17 14:30:25 2025
+ 
+Determining the workload for aitot = 4096 on MPI odd rank 1
+odd rank 1 sqrt odd/size = 0.5
+odd rank 1 start = 1
+odd rank 1 end = 2896
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 3 | Mon Mar 17 14:30:25 2025
+ 
+Determining the workload for aitot = 4096 on MPI odd rank 3
+odd rank 3 sqrt odd/size = 0.866025
+odd rank 3 start = 3
+odd rank 3 end = 4096
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 7 | Mon Mar 17 14:30:25 2025
+ 
+	  [                ]   0% | Mon Mar 17 14:30:25 2025
+
+	  [                ]   0% | Mon Mar 17 14:31:15 2025
+
+	  [####            ]  25% | Mon Mar 17 15:03:34 2025
+
+	  [####            ]  25% | Mon Mar 17 15:42:09 2025
+
+	  [########        ]  50% | Mon Mar 17 16:24:52 2025
+
+	  [########        ]  50% | Mon Mar 17 18:01:13 2025
+
+	  [############    ]  75% | Mon Mar 17 18:51:45 2025
+
+	  [############    ]  75% | Mon Mar 17 20:34:27 2025
+
+  Done computing direct mat | Mon Mar 17 22:31:45 2025
+
+  Done computing exchange mat | Mon Mar 17 23:11:53 2025
+
+Successfully reduced direct mat from even ranks | Tue Mar 18 00:32:11 2025
+
+Successfully reduced exchange mat from even ranks | Tue Mar 18 00:32:11 2025
+
+Successfully sent exchange mat to mpi_rank 0 | Tue Mar 18 00:32:11 2025
+
+Exiting program after computing Coulomb matrix elems | Tue Mar 18 00:32:11 2025
+
+Exiting program after computing Coulomb matrix elems | Tue Mar 18 00:32:11 2025
+
+Exiting program after computing Coulomb matrix elems | Tue Mar 18 00:32:11 2025
+
+Exiting program after computing Coulomb matrix elems | Tue Mar 18 00:32:11 2025
+
+Exiting program after computing Coulomb matrix elems | Tue Mar 18 00:32:11 2025
+
+Exiting program after computing Coulomb matrix elems | Tue Mar 18 00:32:11 2025
+
+Exiting program after computing Coulomb matrix elems | Tue Mar 18 00:32:11 2025
+
+Exiting program after computing Coulomb matrix elems | Tue Mar 18 00:32:11 2025
+

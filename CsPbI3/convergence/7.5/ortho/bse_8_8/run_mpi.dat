@@ -1,0 +1,119 @@
+Fri Mar  7 10:33:58 2025
+
+******************************************************************************
+
+ist->nx = 304	ist->dx = 0.500000
+ist->ny = 304	ist->dy = 0.500000
+ist->nz = 304	ist->dz = 0.500000
+par->epsx = 6.1 par->epsy = 6.1 par->epsz = 6.1
+fermiEnergy = -0.19
+The number of openMP threads used = 64
+Total # of filtered hole eigenstates = 113
+Total # of filtered electron eigenstates = 57
+The eval.par index of the HOMO state = 139
+The eval.par index of the LUMO state = 140
+The HOMO energy = -0.22749297 -6.19040224
+The LUMO energy = -0.15898747 -4.32627159
+Fundamental gap = 0.0685055031 1.8641306469
+The total number of atoms = 7344
+Number of grid points used: nx = 304  ny = 304  nz = 304
+Length of pseudopotential files, npot = 8192
+Kinetic energy maximum = 10.0000
+Dielectric Constant: epsx = 6.1000 epsy = 6.1000 epsz = 6.1000
+Maximum sigma for an eigenstate, deps = 0.0001
+Energy windows, electrons = 0.2000 holes = 0.1000
+The number of hole eigenstates within 0.1000 of the HOMO energy = 113
+The number of electron eigenstates within 0.2000 of the LUMO energy = 57
+Total number of carrier states, ms = 170
+QD (minimum) dimensions: xd = 76.00 yd = 76.00 zd = 76.00
+Final Box Dimensions: xd = 76 yd = 76 zd = 76
+Gamma = 0.046053
+Grid point spacing: dx = 0.5000 dy = 0.5000 dz = 0.5000 dv = 0.125000 dr = 0.866025
+gamma = 0.0460526  gammaeps = 0.113742
+sqrtaveps = 2.46982
+grid->dkx = 0.0413367 grid->dky = 0.0413367 grid->dkz = 0.0413367
+ngrid_1 = 3.55942e-08
+The index of lowest energy occupied level used = 25
+allocating memory for 113 hole and 57 electron states
+closed ppsifreeing evalindex
+freeing psihomo
+freeing psilumo
+Number of hole eigenstates used in the BSE calculation = 8
+Number of electron eigenstates used in the BSE calculation =  8
+Total number of eigenstates used in the BSE calculation = 16
+
+Computing spin composition of qp spinors | Fri Mar  7 10:34:19 2025
+
+Starting calculation of BSE kernel | Fri Mar  7 10:34:20 2025
+
+Determining the workload for abtot = 64 on MPI even rank 0
+even rank 0 sqrt even/size = 0
+even rank 0 start = 0
+even rank 0 end = 64
+Number of direct mat cycles = 65
+Calculating screened direct matrix, K^d_ab,ij on rank 0 | Fri Mar  7 10:34:20 2025
+
+Determining the workload for aitot = 64 on MPI odd rank 0
+odd rank 0 sqrt odd/size = 0
+odd rank 0 start = 0
+odd rank 0 end = 64
+Number of exchange mat cycles = 65
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 1 | Fri Mar  7 10:34:20 2025
+ 
+	  [                ] 1461743616% | Fri Mar  7 10:34:52 2025
+
+  Done computing exchange mat | Fri Mar  7 10:35:18 2025
+
+  Done computing direct mat | Fri Mar  7 10:35:18 2025
+
+Successfully reduced direct mat from even ranks | Fri Mar  7 10:35:18 2025
+
+Successfully reduced exchange mat from even ranks | Fri Mar  7 10:35:18 2025
+
+Successfully sent exchange mat to mpi_rank 0 | Fri Mar  7 10:35:18 2025
+
+
+Computing angular momentum elements | Fri Mar  7 10:35:18 2025
+
+Hole States: | Fri Mar  7 10:35:22 2025
+
+0	0	-0.323686	-0.019149	0.068479	3058.326445	0.277110
+1	1	0.323686	0.019149	-0.068479	3058.326449	0.277110
+2	2	0.338974	-0.314377	0.890777	3044.820584	-0.058839
+3	3	-0.338974	0.314377	-0.890777	3044.820580	-0.058839
+4	4	-0.113021	-0.008746	-1.390590	3102.155669	-1.187815
+5	5	0.113021	0.008747	1.390590	3102.155676	-1.187815
+6	6	0.103728	0.297847	0.095245	2293.035354	-0.488348
+7	7	-0.103728	-0.297847	-0.095245	2293.035354	-0.488348
+Electron States: | Fri Mar  7 10:36:06 2025
+
+8	8	0.437549	0.819052	-0.408397	1490.066698	-1.611114
+9	9	-0.437549	-0.819052	0.408397	1490.066650	-1.611114
+10	10	-0.257027	-0.526797	-0.019016	2107.331154	-0.681549
+11	11	0.257027	0.526798	0.019017	2107.330981	-0.681549
+12	12	-0.253208	0.466224	1.391245	2045.968167	-2.027374
+13	13	0.253207	-0.466223	-1.391246	2045.968131	-2.027374
+14	14	-0.064819	-0.064788	0.921423	2078.098327	-1.611436
+15	15	0.064819	0.064792	-0.921423	2078.099153	-1.611437
+
+Computing spinor BSE | Fri Mar  7 10:36:47 2025
+
+The number of electron-hole pairs in the exciton basis = 64
+Ground state exciton has energy = 0.0651730378 (1.7734496017 eV) (-0.0000000000 Imag)
+Compute excitonic spin expectation values | Fri Mar  7 10:36:47 2025
+
+Compute exciton orbital ang mom expectation values | Fri Mar  7 10:36:47 2025
+
+Compute excitonic spin-orbit expectation values | Fri Mar  7 10:36:47 2025
+
+Compute all excitonic states | Fri Mar  7 10:36:47 2025
+
+U^+ H = U^+HU | Fri Mar  7 10:36:47 2025
+
+Compute excitonic optical properties | Fri Mar  7 10:36:47 2025
+
+
+******************************************************************************
+
+Fri Mar  7 10:36:47 2025

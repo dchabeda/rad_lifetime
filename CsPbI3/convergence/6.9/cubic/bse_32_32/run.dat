@@ -1,0 +1,51 @@
+Tue Mar 18 11:29:08 2025
+
+******************************************************************************
+
+ist->nx = 280	ist->dx = 0.500000
+ist->ny = 280	ist->dy = 0.500000
+ist->nz = 280	ist->dz = 0.500000
+par->epsx = 6.1 par->epsy = 6.1 par->epsz = 6.1
+...reading optionalInput.par
+Coulomb mat elems already computed! Reading from files.
+fermiEnergy = -0.19
+The number of openMP threads used = 128
+Total # of filtered hole eigenstates = 129
+Total # of filtered electron eigenstates = 112
+The eval.par index of the HOMO state = 129
+The eval.par index of the LUMO state = 130
+The HOMO energy = -0.23031653 -6.26723521
+The LUMO energy = -0.15722618 -4.27834458
+Fundamental gap = 0.0730903456 1.9888906290
+The total number of atoms = 5687
+Number of grid points used: nx = 280  ny = 280  nz = 280
+Length of pseudopotential files, npot = 8192
+Kinetic energy maximum = 10.0000
+Dielectric Constant: epsx = 6.1000 epsy = 6.1000 epsz = 6.1000
+Maximum sigma for an eigenstate, deps = 0.0001
+Energy windows, electrons = 0.2000 holes = 0.1000
+The number of hole eigenstates within 0.1000 of the HOMO energy = 129
+The number of electron eigenstates within 0.2000 of the LUMO energy = 112
+Total number of carrier states, ms = 241
+QD (minimum) dimensions: xd = 70.00 yd = 70.00 zd = 70.00
+Final Box Dimensions: xd = 70 yd = 70 zd = 70
+Gamma = 0.050000
+Grid point spacing: dx = 0.5000 dy = 0.5000 dz = 0.5000 dv = 0.125000 dr = 0.866025
+gamma = 0.05  gammaeps = 0.123491
+sqrtaveps = 2.46982
+grid->dkx = 0.0448799 grid->dky = 0.0448799 grid->dkz = 0.0448799
+ngrid_1 = 4.55539e-08
+The index of lowest energy occupied level used = 1
+allocating memory for 129 hole and 112 electron states
+closed ppsifreeing evalindex
+freeing psihomo
+freeing psilumo
+Number of hole eigenstates used in the BSE calculation = 32
+Number of electron eigenstates used in the BSE calculation =  32
+Total number of eigenstates used in the BSE calculation = 64
+
+Computing spin composition of qp spinors | Tue Mar 18 11:30:09 2025
+
+Starting calculation of BSE kernel | Tue Mar 18 11:30:10 2025
+
+Loading direct and exchange mats from files

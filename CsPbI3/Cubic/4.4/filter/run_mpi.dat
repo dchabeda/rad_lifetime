@@ -1,0 +1,359 @@
+******************************************************************************
+
+RUNNING PROGRAM: FILTER DIAGONALIZATION
+This calculation began at: Tue Mar  4 22:05:15 2025
+
+Printing from root node 0
+******************************************************************************
+
+
+******************************************************************************
+
+1.	INITIALIZING JOB | Tue Mar  4 22:05:15 2025
+
+
+******************************************************************************
+
+Reading job specs from input.par:
+
+	Grid parameters (preliminary):
+	------------------------------
+	nx = 188, ny = 188, nz = 188
+	dx = 0.5, dy = 0.5, dz = 0.5
+	ngrid = 6644672 nspin = 2
+	Nanocrystal COM will be centered at the origin
+
+	Pseudopotential options:
+	--------------------------
+	Strain dependent pseudopotential will NOT be calculated
+	Pseudopotential parameters will not be interpolated
+	Pseudopotentials are short ranged.
+	Crystal structure: unknown
+	Outmost material: unknown
+	Surface Cs atoms NOT rescaled for charge balancing
+	Projector functions will be generated on the fly
+
+	Parameters & counters for filter algorithm:
+	-------------------------------------------
+	nFilterCycles (# random initial states) = 64
+	nFilterPerRank (# states per MPI rank) = 1
+	mStatesPerFilter (# energy targets) = 32
+	nCheby = 8192
+	VBmin = -0.254, VBmax = -0.23
+	CBmin = -0.158, CBmax = -0.138
+	KEmax = 20 a.u.
+	fermiEnergy = -0.19 a.u.
+	setNumEnergyTargets flag on: n_targets_VB = 18 n_targets_CB = 14
+	Random seed will be generated based on clock at runtime
+	Energy range will be approx'd using only local potential
+	printPsiFilt is on. psi-filt.dat and psi-filt.cube files will be printed
+	Orthogonalized wavefunctions will not be output to disk
+	FFT wisdom stored in directory: 
+
+	Parameters for parallelization:
+	-------------------------------
+	MPI_SIZE (# MPI ranks) = 64
+	nThreads (# OMP threads/rank) = 128
+	ham_threads = 16
+
+	Parameters for spin-orbit and non-local:
+	----------------------------------------
+	Spinor wavefunctions turned ON!
+	Spin-orbit coupling is ON!
+	Non-local potential is ON!
+	Rnlcut = 4.10067 Bohr
+	Wavefunctions are COMPLEX valued! complex_idx = 2
+	Wavefunctions will NOT be time reversed before ortho!
+	  t_rev_factor = 1
+
+	Flags for optional output:
+	--------------------------
+	Matrix elements of the potential will not be calculated
+	Eigenstates with variance above 1 a.u. will not be saved to disk
+	Hamiltonian timing specs will be printed
+	Cube files of top 2 states (sigma_E_cut < 1) in VB & CB will be printed
+	Spin and Ang. Mom. statistics will not be computed
+
+	Flags for restarting computation:
+	---------------------------------
+	Filter will NOT restart if no eigenstates obtained after diag.
+	Filter will save checkpoints along the job run
+	Filter will restart from checkpoint 0
+
+Reading atomic coords from conf.par:
+	natoms = 1519
+	n_atom_types = 2
+	the atoms are [   I  Pb ]
+	n_NL_atoms = 1519
+
+Initializing the grid parameters:
+	Min. required box dimension for each direction (Bohr):
+	-----------------------------------------------------
+	xd = 94.00 yd = 94.00 zd = 94.00
+	The x_min = -47 and x_max 46.5
+	The y_min = -47 and y_max 46.5
+	The z_min = -47 and z_max 46.5
+
+	Final grid parameters:
+	----------------------
+	xmin = -47.000000 ymin = -47.000000 zmin = -47.000000
+	dx = 0.5 dy = 0.5 dz = 0.5 dv = 0.125 dr = 0.866025
+	nx = 188  ny = 188  nz = 188
+	ngrid = 6644672, nspin = 2, nspinngrid = 13289344
+
+Building the r- and k-space grids:
+	Building the grid...
+	Count max no. grid points in Rnlcut of an atom
+	n_NL_gridpts = 2330
+
+Setting the filter energy targets:
+	Spacing between states in VB: 0.00133333 a.u.
+	Spacing between states in CB: 0.00142857 a.u.
+
+	Energy target list:
+	-------------------
+	-0.252667
+	-0.251333
+	-0.25
+	-0.248667
+	-0.247333
+	-0.246
+	-0.244667
+	-0.243333
+	-0.242
+	-0.240667
+	-0.239333
+	-0.238
+	-0.236667
+	-0.235333
+	-0.234
+	-0.232667
+	-0.231333
+	-0.23
+	-0.158
+	-0.156571
+	-0.155143
+	-0.153714
+	-0.152286
+	-0.150857
+	-0.149429
+	-0.148
+	-0.146571
+	-0.145143
+	-0.143714
+	-0.142286
+	-0.140857
+	-0.139429
+
+Allocating memory for pot, psi, eig_vals...
+	done allocating memory.
+
+Initializing potentials...
+
+Local pseudopotential:
+	Reading atomic pseudopotentials...
+	potI.par potPb.par 
+	Reading SO & non-local pot parameters
+	Constructing total pseudopotential on the grid...
+	Vmin = -1.30041 Vmax = 0.74956 dV = 2.04997 
+
+Spin-orbit pseudopotential:
+	SO projectors generated.
+
+Non-local pseudopotential:
+	NL projectors generated.
+
+
+******************************************************************************
+
+2. CALCULATING HAMILTONIAN ENERGY RANGE | Tue Mar  4 22:16:10 2025
+
+
+******************************************************************************
+
+Approximating energy range of Hamiltonian as [Vmin, Vmax + KE_max]
+Emin = -1.08049, Emax = 28.4995, dE = 29.58
+
+Done w calc energy range, CPU time (sec) 0.001623, wall run time (sec) 0
+
+
+******************************************************************************
+
+3. GENERATING COEFFICIENTS | Tue Mar  4 22:16:10 2025
+
+
+******************************************************************************
+
+  ncheby = 8192 dt = 12271.7 dE = 29.58
+  Energy width, sigma, of filter function = 0.00638312 a.u.
+  Suggested max span of spectrum for filtering = 0.20426 a.u.
+  Requested span of spectrum to filter = 0.0412381 a.u.
+
+Initializing random filter states
+
+Timing Hamiltonian operator... | Tue Mar  4 22:16:19 2025
+
+	Kinetic energy: 111.4 (msec)
+	Spin-Orbit potential: 103.1 (msec)
+	Non-local potential: 83.44 (msec)
+	Local potential: 19.26 (msec)
+Done timing Hamiltonian | Tue Mar  4 22:16:27 2025
+
+
+
+******************************************************************************
+
+4. RUN FILTER CYCLE | Tue Mar  4 22:16:27 2025
+
+
+******************************************************************************
+
+  4.1 Running filter cycle
+  Random psi 1 / 1 | Tue Mar  4 22:16:27 2025
+
+	  [                ]   0% | Tue Mar  4 22:16:29 2025
+
+	  [####            ]  25% | Tue Mar  4 22:41:02 2025
+
+	  [########        ]  50% | Tue Mar  4 23:05:34 2025
+
+	  [############    ]  75% | Tue Mar  4 23:30:06 2025
+
+	  [############### ] 100% | Tue Mar  4 23:54:35 2025
+
+
+  4.3 Normalizing filtered states
+
+  4.4 Computing the energies of all filtered states
+
+done calculating filter, CPU time (sec) 94462.3, wall run time (sec) 6018
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+Allocating mem for psitot
+Gathering psitot from all mpi_ranks
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather
+INT MAX = 2147483647
+Size of psi_rank < INT_MAX; Calling MPI_Gather

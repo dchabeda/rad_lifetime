@@ -1,0 +1,106 @@
+Fri Mar  7 10:22:48 2025
+
+******************************************************************************
+
+ist->nx = 304	ist->dx = 0.500000
+ist->ny = 304	ist->dy = 0.500000
+ist->nz = 304	ist->dz = 0.500000
+par->epsx = 6.1 par->epsy = 6.1 par->epsz = 6.1
+...reading optionalInput.par
+Job will stop after computing Coulomb kernel.
+fermiEnergy = -0.19
+The number of openMP threads used = 128
+Total # of filtered hole eigenstates = 113
+Total # of filtered electron eigenstates = 57
+The eval.par index of the HOMO state = 139
+The eval.par index of the LUMO state = 140
+The HOMO energy = -0.22749297 -6.19040224
+The LUMO energy = -0.15898747 -4.32627159
+Fundamental gap = 0.0685055031 1.8641306469
+The total number of atoms = 7344
+Number of grid points used: nx = 304  ny = 304  nz = 304
+Length of pseudopotential files, npot = 8192
+Kinetic energy maximum = 10.0000
+Dielectric Constant: epsx = 6.1000 epsy = 6.1000 epsz = 6.1000
+Maximum sigma for an eigenstate, deps = 0.0001
+Energy windows, electrons = 0.2000 holes = 0.1000
+The number of hole eigenstates within 0.1000 of the HOMO energy = 113
+The number of electron eigenstates within 0.2000 of the LUMO energy = 57
+Total number of carrier states, ms = 170
+QD (minimum) dimensions: xd = 76.00 yd = 76.00 zd = 76.00
+Final Box Dimensions: xd = 76 yd = 76 zd = 76
+Gamma = 0.046053
+Grid point spacing: dx = 0.5000 dy = 0.5000 dz = 0.5000 dv = 0.125000 dr = 0.866025
+gamma = 0.0460526  gammaeps = 0.113742
+sqrtaveps = 2.46982
+grid->dkx = 0.0413367 grid->dky = 0.0413367 grid->dkz = 0.0413367
+ngrid_1 = 3.55942e-08
+The index of lowest energy occupied level used = 25
+allocating memory for 113 hole and 57 electron states
+closed ppsifreeing evalindex
+freeing psihomo
+freeing psilumo
+Number of hole eigenstates used in the BSE calculation = 96
+Number of electron eigenstates used in the BSE calculation =  48
+Total number of eigenstates used in the BSE calculation = 144
+
+Computing spin composition of qp spinors | Fri Mar  7 10:26:57 2025
+
+Starting calculation of BSE kernel | Fri Mar  7 10:27:01 2025
+
+Determining the workload for abtot = 2304 on MPI even rank 2
+even rank 2 sqrt even/size = 0.707107
+even rank 2 start = 1629
+even rank 2 end = 1995
+Calculating screened direct matrix, K^d_ab,ij on rank 2 | Fri Mar  7 10:27:31 2025
+
+Determining the workload for aitot = 4608 on MPI odd rank 0
+odd rank 0 sqrt odd/size = 0
+odd rank 0 start = 0
+odd rank 0 end = 2304
+Number of exchange mat cycles = 1152
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 1 | Fri Mar  7 10:27:31 2025
+ 
+Determining the workload for aitot = 4608 on MPI odd rank 3
+odd rank 3 sqrt odd/size = 0.866025
+odd rank 3 start = 3990
+odd rank 3 end = 4608
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 7 | Fri Mar  7 10:27:31 2025
+ 
+Determining the workload for abtot = 2304 on MPI even rank 0
+even rank 0 sqrt even/size = 0
+even rank 0 start = 0
+even rank 0 end = 1152
+Number of direct mat cycles = 576
+Calculating screened direct matrix, K^d_ab,ij on rank 0 | Fri Mar  7 10:27:31 2025
+
+Determining the workload for aitot = 4608 on MPI odd rank 2
+odd rank 2 sqrt odd/size = 0.707107
+odd rank 2 start = 3258
+odd rank 2 end = 3990
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 5 | Fri Mar  7 10:27:31 2025
+ 
+Determining the workload for abtot = 2304 on MPI even rank 1
+even rank 1 sqrt even/size = 0.5
+even rank 1 start = 1152
+even rank 1 end = 1629
+Calculating screened direct matrix, K^d_ab,ij on rank 1 | Fri Mar  7 10:27:31 2025
+
+Determining the workload for aitot = 4608 on MPI odd rank 1
+odd rank 1 sqrt odd/size = 0.5
+odd rank 1 start = 2304
+odd rank 1 end = 3258
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 3 | Fri Mar  7 10:27:31 2025
+ 
+Determining the workload for abtot = 2304 on MPI even rank 3
+even rank 3 sqrt even/size = 0.866025
+even rank 3 start = 1995
+even rank 3 end = 2304
+Calculating screened direct matrix, K^d_ab,ij on rank 3 | Fri Mar  7 10:27:31 2025
+
+	  [                ]   0% | Fri Mar  7 10:27:41 2025
+

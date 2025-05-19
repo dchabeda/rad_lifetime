@@ -1,0 +1,264 @@
+******************************************************************************
+
+RUNNING PROGRAM: FILTER DIAGONALIZATION
+This calculation began at: Sat Mar  8 03:56:22 2025
+
+Printing from root node 0
+******************************************************************************
+
+
+******************************************************************************
+
+1.	INITIALIZING JOB | Sat Mar  8 03:56:22 2025
+
+
+******************************************************************************
+
+Reading job specs from input.par:
+
+	Grid parameters (preliminary):
+	------------------------------
+	nx = 188, ny = 188, nz = 188
+	dx = 0.5, dy = 0.5, dz = 0.5
+	ngrid = 6644672 nspin = 2
+	Nanocrystal COM will be centered at the origin
+
+	Pseudopotential options:
+	--------------------------
+	Strain dependent pseudopotential will NOT be calculated
+	Pseudopotential parameters will not be interpolated
+	Pseudopotentials are short ranged.
+	Crystal structure: unknown
+	Outmost material: unknown
+	Surface Cs atoms NOT rescaled for charge balancing
+	Projector functions will be read from files
+
+	Parameters & counters for filter algorithm:
+	-------------------------------------------
+	nFilterCycles (# random initial states) = 64
+	nFilterPerRank (# states per MPI rank) = 64
+	mStatesPerFilter (# energy targets) = 32
+	nCheby = 8192
+	VBmin = -0.254, VBmax = -0.23
+	CBmin = -0.158, CBmax = -0.138
+	KEmax = 20 a.u.
+	fermiEnergy = -0.19 a.u.
+	setNumEnergyTargets flag on: n_targets_VB = 18 n_targets_CB = 14
+	Random seed will be generated based on clock at runtime
+	Energy range will be approx'd using only local potential
+	printPsiFilt is on. psi-filt.dat and psi-filt.cube files will be printed
+	Orthogonalized wavefunctions will not be output to disk
+	FFT wisdom stored in directory: 
+
+	Parameters for parallelization:
+	-------------------------------
+	MPI_SIZE (# MPI ranks) = 1
+	nThreads (# OMP threads/rank) = 128
+	ham_threads = 16
+
+	Parameters for spin-orbit and non-local:
+	----------------------------------------
+	Spinor wavefunctions turned ON!
+	Spin-orbit coupling is ON!
+	Non-local potential is ON!
+	Rnlcut = 4.10067 Bohr
+	Wavefunctions are COMPLEX valued! complex_idx = 2
+	Wavefunctions will NOT be time reversed before ortho!
+	  t_rev_factor = 1
+
+	Flags for optional output:
+	--------------------------
+	Matrix elements of the potential will not be calculated
+	Eigenstates with variance above 1 a.u. will not be saved to disk
+	Hamiltonian timing specs will be printed
+	Cube files of top 2 states (sigma_E_cut < 1) in VB & CB will be printed
+	Spin and Ang. Mom. statistics will not be computed
+
+	Flags for restarting computation:
+	---------------------------------
+	Filter will NOT restart if no eigenstates obtained after diag.
+	Filter will save checkpoints along the job run
+	Filter will restart from checkpoint 1
+	Filter will restart from orthogonalization step!
+
+Reading atomic coords from conf.par:
+	natoms = 1519
+	n_atom_types = 2
+	the atoms are [   I  Pb ]
+	n_NL_atoms = 1519
+
+Initializing the grid parameters:
+	Min. required box dimension for each direction (Bohr):
+	-----------------------------------------------------
+	xd = 94.00 yd = 94.00 zd = 94.00
+	The x_min = -47 and x_max 46.5
+	The y_min = -47 and y_max 46.5
+	The z_min = -47 and z_max 46.5
+
+	Final grid parameters:
+	----------------------
+	xmin = -47.000000 ymin = -47.000000 zmin = -47.000000
+	dx = 0.5 dy = 0.5 dz = 0.5 dv = 0.125 dr = 0.866025
+	nx = 188  ny = 188  nz = 188
+	ngrid = 6644672, nspin = 2, nspinngrid = 13289344
+
+Building the r- and k-space grids:
+	Building the grid...
+	Count max no. grid points in Rnlcut of an atom
+	n_NL_gridpts = 2330
+
+Setting the filter energy targets:
+	Spacing between states in VB: 0.00133333 a.u.
+	Spacing between states in CB: 0.00142857 a.u.
+
+	Energy target list:
+	-------------------
+	-0.252667
+	-0.251333
+	-0.25
+	-0.248667
+	-0.247333
+	-0.246
+	-0.244667
+	-0.243333
+	-0.242
+	-0.240667
+	-0.239333
+	-0.238
+	-0.236667
+	-0.235333
+	-0.234
+	-0.232667
+	-0.231333
+	-0.23
+	-0.158
+	-0.156571
+	-0.155143
+	-0.153714
+	-0.152286
+	-0.150857
+	-0.149429
+	-0.148
+	-0.146571
+	-0.145143
+	-0.143714
+	-0.142286
+	-0.140857
+	-0.139429
+
+Allocating memory for pot, psi, eig_vals...
+	done allocating memory.
+
+Initializing potentials...
+
+Local pseudopotential:
+	Reading atomic pseudopotentials...
+	potI.par potPb.par 
+	Reading SO & non-local pot parameters
+	Constructing total pseudopotential on the grid...
+	Vmin = -1.30041 Vmax = 0.74956 dV = 2.04997 
+
+Spin-orbit pseudopotential:
+	SO projectors generated.
+
+Non-local pseudopotential:
+	NL projectors generated.
+
+
+******************************************************************************
+****  RESTART FROM ORTHO  **  RESTART FROM ORTHO  **  RESTART FROM ORTHO  ****
+******************************************************************************
+
+No. states for orthogonalization = 1200
+Size of psitot array = 2.4e+02 GB
+Reading psi-filt.dat
+psitot[max] = -2.86845e-10
+
+Normalizing filtered states (for safety)
+Done normalizing
+
+
+******************************************************************************
+
+5. ORTHOGONALIZATING FILTERED STATES | Sat Mar  8 04:03:27 2025
+
+
+******************************************************************************
+
+mn_states_tot before ortho = 1200
+Complex wavefunctions used. Allocating "rwork & work_z" for complex SVD
+Doing complex-valued SVD...
+Done with SVD
+
+SVD cutoff (no. orthogonal vectors) is 711
+Spinor wavefunctions used. Freeing rwork and work_z
+mn_states_tot after ortho = 711
+
+done calculating ortho, CPU time (sec) 95032.4, wall run time (sec) 1785
+
+
+******************************************************************************
+****    CHECKPOINT 2 *** CHECKPOINT 2 ** CHECKPOINT 2 *** CHECKPOINT 2    ****
+******************************************************************************
+
+Save state tag: 738943540
+
+
+******************************************************************************
+
+6. DIAGONALIZING HAMILTONIAN | Sat Mar  8 04:36:22 2025
+
+
+******************************************************************************
+Constructing Hamiltonian matrix
+	  [                ]   0% | Sat Mar  8 04:36:24 2025
+
+	  [####            ]  25% | Sat Mar  8 04:45:09 2025
+
+	  [########        ]  50% | Sat Mar  8 04:56:44 2025
+
+	  [############    ]  75% | Sat Mar  8 05:09:13 2025
+
+	  [############### ] 100% | Sat Mar  8 05:21:34 2025
+
+Diagonalizing Hamiltonian | Sat Mar  8 05:21:34 2025
+
+Diagonalization complete! | Sat Mar  8 05:21:35 2025
+
+Writing out eigenvectors in the grid basis
+	Finished grid point no. 0 | Sat Mar  8 05:21:35 2025
+
+	Finished grid point no. 3322336 | Sat Mar  8 05:23:32 2025
+
+	Finished grid point no. 6644672 | Sat Mar  8 05:25:30 2025
+
+	Finished grid point no. 9967008 | Sat Mar  8 05:27:25 2025
+
+
+done calculating Hmat, CPU time (sec) 168516, wall run time (sec) 3195
+Entering mod_sigma
+
+
+******************************************************************************
+
+7. CALCULATING VARIANCE OF EIGENVALUES | Sat Mar  8 05:32:25 2025
+
+
+******************************************************************************
+Total mem < Large mem threshold. Parallelizing over states
+
+getAllStates flag off
+Writing only converged eigenstates to disk
+No. of eigenstates with sigE < 1: new_mstot = 711
+
+Output_tag = 550572688
+
+
+******************************************************************************
+
+DONE WITH PROGRAM: FILTER DIAGONALIZATION
+This calculation ended at: Sat Mar  8 05:40:52 2025
+
+Total job CPU time (sec) 2.781e+05 | 77:14:50
+Total wall run time (sec) 6270 | 01:44:30
+******************************************************************************

@@ -1,0 +1,6 @@
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 36686079.0 ON nid200045 CANCELLED AT 2025-03-09T01:46:54 ***
+srun: error: nid200045: tasks 0-1: Killed
+srun: Terminating StepId=36686079.0
+srun: error: nid200046: tasks 2-3: Killed

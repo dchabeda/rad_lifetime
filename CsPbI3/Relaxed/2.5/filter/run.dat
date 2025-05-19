@@ -1,0 +1,2675 @@
+******************************************************************************
+
+RUNNING PROGRAM: FILTER DIAGONALIZATION
+This calculation began at: Mon Dec  9 09:00:56 2024
+
+******************************************************************************
+
+
+******************************************************************************
+
+1.	INITIALIZING JOB | Mon Dec  9 09:00:56 2024
+
+
+******************************************************************************
+
+Reading job specifications from input.par:
+
+	Grid parameters (preliminary):
+	------------------------------
+	nx = 116, ny = 116, nz = 116
+	dx = 0.5, dy = 0.5, dz = 0.5
+	ngrid = 1560896 nspin = 2
+	Nanocrystal COM will be centered at the origin
+	Default cartesian grid will be generated
+	Atom-centered Gaussian basis functions will be used
+
+	Pseudopotential options:
+	--------------------------
+	Strain dependent pseudopotential will NOT be calculated
+	Pseudopotential parameters will be interpolated based on NC geometry
+	Pseudopotentials are short ranged.
+	Crystal structure: unknown
+	Outmost material: unknown
+	Surface Cs atoms NOT rescaled for charge balancing
+
+	Parameters & counters for filter algorithm:
+	-------------------------------------------
+	nFilterCycles (# random initial states) = 48
+	statesPerFilter (# energy targets) = 16
+	nCheby = 4096
+	VBmin = -0.28, VBmax = -0.238
+	CBmin = -0.148, CBmax = -0.08
+	KEmax = 10 a.u.
+	fermiEnergy = -0.19 a.u.
+	setNumEnergyTargets flag on: n_targets_VB = 9 n_targets_CB = 7
+	Random seed will be generated based on clock at runtime
+	Energy range will be approx'd using only local potential
+	Job will perform Ortho. and Diag. steps after Filtering.
+	printPsiFilt is on. psi-filt.dat and psi-filt.cube files will be printed
+	Orthogonalized wavefunctions will not be output to disk
+
+	Parameters for parallelization:
+	-------------------------------
+	nThreads (# OMP threads) = 128
+
+	Parameters for spin-orbit and non-local:
+	----------------------------------------
+	Spinor wavefunctions turned ON!
+	Spin-orbit coupling is ON!
+	Non-local potential is ON!
+	Rnlcut = 4.10067 Bohr
+	Wavefunctions are COMPLEX valued! complex_idx = 2
+
+	Flags for optional output:
+	--------------------------
+	Matrix elements of the potential will not be calculated
+	All eigenstates will be saved to disk regardless of variance
+	Hamiltonian timing specs will not be printed
+	Cube files of top 4 states (sigma_E_cut < 0.001) in VB & CB will be printed
+	Spin and Ang. Mom. statistics will not be computed
+
+	Flags for restarting computation:
+	---------------------------------
+	Filter will NOT restart if no eigenstates obtained after diag.
+	No checkpoint saves requested
+	No checkpoint specified for restart. Job will run in normal sequence.
+
+Reading atomic configuration from conf.par:
+	natoms = 421
+	n_atom_types = 3
+	the atoms are [ Cs I Pb ]
+	n_NL_atoms = 421
+
+Initializing the grid parameters:
+	Min. required box dimension for each direction (Bohr):
+	-----------------------------------------------------
+	xd = 58 yd = 58 zd = 58
+	The x_min = -29 and x_max 28.5
+	The y_min = -29 and y_max 28.5
+	The z_min = -29 and z_max 28.5
+
+	Final grid parameters:
+	----------------------
+	xd = 58.0 yd = 58.0 zd = 58.0
+	dx = 0.5 dy = 0.5 dz = 0.5 dv = 0.125 dr = 0.866025
+	nx = 116  ny = 116  nz = 116
+	ngrid = 1560896, nspin = 2, nspinngrid = 3121792
+
+Building the real-space and k-space grids:
+	Building the grid...
+	Count max no. grid points in Rnlcut of an atom
+	n_NL_gridpts = 2327
+
+Setting the filter energy targets:
+	Spacing between states in VB: 0.00466667 a.u.
+	Spacing between states in CB: 0.00971429 a.u.
+
+	Energy target list:
+	-------------------
+	-0.275333
+	-0.270667
+	-0.266
+	-0.261333
+	-0.256667
+	-0.252
+	-0.247333
+	-0.242667
+	-0.238
+	-0.148
+	-0.138286
+	-0.128571
+	-0.118857
+	-0.109143
+	-0.0994286
+	-0.0897143
+Available RAM: 489612532 KB (466.93 GB)
+
+Allocating memory for FFT, pot, psi, eig_vals...	done allocating memory.
+
+Initializing potentials...
+
+Local pseudopotential:
+	Reading atomic pseudopotentials...
+	potCs_cubic.par potCs_ortho.par potI_cubic.par potI_ortho.par potPb_cubic.par potPb_ortho.par 
+	Interpolating pseudopotential parameters
+atom 3 (I) has bond angle 168.272
+atom 11 (I) has bond angle 161.866
+atom 14 (I) has bond angle 161.866
+atom 16 (I) has bond angle 168.083
+atom 17 (I) has bond angle 168.933
+atom 23 (I) has bond angle 168.272
+atom 25 (I) has bond angle 168.083
+atom 37 (I) has bond angle 169.848
+atom 40 (I) has bond angle 166.863
+atom 42 (I) has bond angle 169.562
+atom 43 (I) has bond angle 168.109
+atom 50 (I) has bond angle 166.863
+atom 52 (I) has bond angle 169.848
+atom 60 (I) has bond angle 168.272
+atom 68 (I) has bond angle 161.865
+atom 71 (I) has bond angle 161.865
+atom 73 (I) has bond angle 173.881
+atom 74 (I) has bond angle 168.109
+atom 81 (I) has bond angle 168.272
+atom 83 (I) has bond angle 173.881
+atom 87 (I) has bond angle 172.752
+atom 88 (I) has bond angle 174.81
+atom 99 (I) has bond angle 170.596
+atom 100 (I) has bond angle 174.81
+atom 101 (I) has bond angle 151.989
+bond_angle 151.989 < ortho
+atom 102 (I) has bond angle 156.698
+bond_angle 156.698 < ortho
+atom 103 (I) has bond angle 164.688
+atom 104 (I) has bond angle 156.698
+bond_angle 156.698 < ortho
+atom 105 (I) has bond angle 151.989
+bond_angle 151.989 < ortho
+atom 106 (I) has bond angle 156.698
+bond_angle 156.698 < ortho
+atom 107 (I) has bond angle 173.881
+atom 108 (I) has bond angle 178.845
+atom 109 (I) has bond angle 178.311
+atom 110 (I) has bond angle 168.933
+atom 119 (I) has bond angle 164.688
+atom 120 (I) has bond angle 156.698
+bond_angle 156.698 < ortho
+atom 121 (I) has bond angle 170.596
+atom 122 (I) has bond angle 174.81
+atom 123 (I) has bond angle 172.752
+atom 124 (I) has bond angle 174.81
+atom 125 (I) has bond angle 173.881
+atom 126 (I) has bond angle 178.845
+atom 131 (I) has bond angle 175.952
+atom 132 (I) has bond angle 170.225
+atom 143 (I) has bond angle 175.952
+atom 144 (I) has bond angle 174.12
+atom 145 (I) has bond angle 154.7
+bond_angle 154.7 < ortho
+atom 146 (I) has bond angle 156.926
+bond_angle 156.926 < ortho
+atom 147 (I) has bond angle 154.7
+bond_angle 154.7 < ortho
+atom 148 (I) has bond angle 150.593
+bond_angle 150.593 < ortho
+atom 149 (I) has bond angle 154.7
+bond_angle 154.7 < ortho
+atom 150 (I) has bond angle 156.926
+bond_angle 156.926 < ortho
+atom 151 (I) has bond angle 173.631
+atom 152 (I) has bond angle 173.631
+atom 153 (I) has bond angle 178.311
+atom 154 (I) has bond angle 178.311
+atom 163 (I) has bond angle 154.7
+bond_angle 154.7 < ortho
+atom 164 (I) has bond angle 150.593
+bond_angle 150.593 < ortho
+atom 165 (I) has bond angle 175.952
+atom 166 (I) has bond angle 174.12
+atom 167 (I) has bond angle 175.952
+atom 168 (I) has bond angle 170.225
+atom 169 (I) has bond angle 173.631
+atom 170 (I) has bond angle 173.631
+atom 183 (I) has bond angle 169.848
+atom 186 (I) has bond angle 166.863
+atom 188 (I) has bond angle 168.109
+atom 189 (I) has bond angle 169.561
+atom 196 (I) has bond angle 166.863
+atom 198 (I) has bond angle 169.848
+atom 208 (I) has bond angle 169.848
+atom 216 (I) has bond angle 166.863
+atom 219 (I) has bond angle 166.863
+atom 220 (I) has bond angle 168.083
+atom 221 (I) has bond angle 173.631
+atom 230 (I) has bond angle 169.848
+atom 231 (I) has bond angle 168.083
+atom 232 (I) has bond angle 173.631
+atom 235 (I) has bond angle 175.952
+atom 236 (I) has bond angle 174.12
+atom 247 (I) has bond angle 175.952
+atom 248 (I) has bond angle 170.225
+atom 249 (I) has bond angle 154.7
+bond_angle 154.7 < ortho
+atom 250 (I) has bond angle 150.593
+bond_angle 150.593 < ortho
+atom 251 (I) has bond angle 154.7
+bond_angle 154.7 < ortho
+atom 252 (I) has bond angle 156.926
+bond_angle 156.926 < ortho
+atom 253 (I) has bond angle 154.7
+bond_angle 154.7 < ortho
+atom 254 (I) has bond angle 150.593
+bond_angle 150.593 < ortho
+atom 255 (I) has bond angle 178.845
+atom 256 (I) has bond angle 178.845
+atom 257 (I) has bond angle 169.562
+atom 258 (I) has bond angle 169.561
+atom 267 (I) has bond angle 154.7
+bond_angle 154.7 < ortho
+atom 268 (I) has bond angle 156.926
+bond_angle 156.926 < ortho
+atom 269 (I) has bond angle 175.952
+atom 270 (I) has bond angle 170.225
+atom 271 (I) has bond angle 175.952
+atom 272 (I) has bond angle 174.12
+atom 273 (I) has bond angle 178.845
+atom 274 (I) has bond angle 178.845
+atom 279 (I) has bond angle 170.596
+atom 280 (I) has bond angle 174.81
+atom 291 (I) has bond angle 172.752
+atom 292 (I) has bond angle 174.81
+atom 293 (I) has bond angle 164.688
+atom 294 (I) has bond angle 156.698
+bond_angle 156.698 < ortho
+atom 295 (I) has bond angle 151.989
+bond_angle 151.989 < ortho
+atom 296 (I) has bond angle 156.698
+bond_angle 156.698 < ortho
+atom 297 (I) has bond angle 164.688
+atom 298 (I) has bond angle 156.698
+bond_angle 156.698 < ortho
+atom 299 (I) has bond angle 178.845
+atom 300 (I) has bond angle 173.881
+atom 301 (I) has bond angle 168.933
+atom 302 (I) has bond angle 178.311
+atom 311 (I) has bond angle 151.989
+bond_angle 151.989 < ortho
+atom 312 (I) has bond angle 156.698
+bond_angle 156.698 < ortho
+atom 313 (I) has bond angle 172.752
+atom 314 (I) has bond angle 174.81
+atom 315 (I) has bond angle 170.596
+atom 316 (I) has bond angle 174.81
+atom 317 (I) has bond angle 178.845
+atom 318 (I) has bond angle 173.881
+atom 332 (I) has bond angle 168.272
+atom 335 (I) has bond angle 161.865
+atom 338 (I) has bond angle 168.084
+atom 339 (I) has bond angle 168.933
+atom 347 (I) has bond angle 161.865
+atom 349 (I) has bond angle 168.272
+atom 352 (I) has bond angle 168.084
+atom 360 (I) has bond angle 169.848
+atom 368 (I) has bond angle 166.863
+atom 371 (I) has bond angle 166.863
+atom 372 (I) has bond angle 173.631
+atom 373 (I) has bond angle 168.083
+atom 382 (I) has bond angle 169.848
+atom 383 (I) has bond angle 173.631
+atom 384 (I) has bond angle 168.083
+atom 397 (I) has bond angle 168.272
+atom 400 (I) has bond angle 161.866
+atom 403 (I) has bond angle 173.881
+atom 404 (I) has bond angle 168.109
+atom 413 (I) has bond angle 161.866
+atom 415 (I) has bond angle 168.272
+atom 418 (I) has bond angle 173.881
+	Constructing total pseudopotential on the grid...
+	Computing interpolated cubic/ortho potential
+	Vmin = -1.30079 Vmax = 0.726823 dV = 2.02761 
+
+Spin-orbit pseudopotential:
+	SO projectors generated.
+
+Non-local pseudopotential:
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+inside loop
+Checkpoint 1
+Inside gen projectors
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+inside loop
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+inside loop
+Checkpoint 1
+inside loop
+inside loop
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+inside loop
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+inside loop
+inside loop
+Checkpoint 1
+inside loop
+Checkpoint 1
+inside loop
+inside loop
+inside loop
+Checkpoint 1
+inside loop
+inside loop
+Checkpoint 1
+inside loop
+inside loop
+Checkpoint 1
+inside loop
+Checkpoint 1
+inside loop
+Checkpoint 1
+inside loop
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+inside loop
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+inside loop
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 1
+inside loop
+inside loop
+inside loop
+Inside gen projectors
+inside loop
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+inside loop
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 1
+inside loop
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 1
+inside loop
+Checkpoint 1
+Inside gen projectors
+inside loop
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 1
+inside loop
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+inside loop
+Inside gen projectors
+inside loop
+Inside gen projectors
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+inside loop
+inside loop
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 1
+inside loop
+inside loop
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+inside loop
+Checkpoint 1
+inside loop
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+inside loop
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+inside loop
+Checkpoint 1
+inside loop
+Checkpoint 1
+inside loop
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+inside loop
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 1
+inside loop
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 1
+inside loop
+Checkpoint 1
+inside loop
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+inside loop
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+inside loop
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Inside gen projectors
+Checkpoint 4
+Checkpoint 5
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Checkpoint 4
+Inside gen projectors
+Checkpoint 5
+Checkpoint 5
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 4
+Checkpoint 3
+Checkpoint 5
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Checkpoint 5
+Inside gen projectors
+Checkpoint 4
+Checkpoint 1
+inside loop
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Inside gen projectors
+Checkpoint 5
+Checkpoint 1
+Checkpoint 5
+Checkpoint 4
+inside loop
+Checkpoint 6
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Inside gen projectors
+Checkpoint 6
+Checkpoint 5
+Checkpoint 1
+Inside gen projectors
+Checkpoint 4
+Checkpoint 4
+Checkpoint 1
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 6
+Checkpoint 5
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 4
+Checkpoint 1
+Inside gen projectors
+Checkpoint 6
+Checkpoint 6
+Checkpoint 1
+Checkpoint 5
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 4
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 5
+Inside gen projectors
+Checkpoint 4
+Inside gen projectors
+Checkpoint 6
+Checkpoint 4
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 5
+Checkpoint 1
+Checkpoint 5
+Checkpoint 5
+inside loop
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Inside gen projectors
+Checkpoint 4
+Checkpoint 4
+Checkpoint 4
+Inside gen projectors
+Checkpoint 4
+Checkpoint 1
+Checkpoint 5
+Checkpoint 1
+inside loop
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 1
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 5
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 4
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Checkpoint 5
+Inside gen projectors
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 5
+Checkpoint 5
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Checkpoint 6
+Checkpoint 6
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Checkpoint 1
+Inside gen projectors
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Checkpoint 1
+Inside gen projectors
+Checkpoint 6
+Inside gen projectors
+Checkpoint 6
+Inside gen projectors
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 4
+Inside gen projectors
+Checkpoint 6
+Checkpoint 1
+inside loop
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Inside gen projectors
+inside loop
+Checkpoint 1
+Checkpoint 5
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Checkpoint 1
+inside loop
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 6
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 3
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 6
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 5
+Inside gen projectors
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 1
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Checkpoint 4
+Checkpoint 6
+Inside gen projectors
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Inside gen projectors
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 5
+Checkpoint 1
+Checkpoint 4
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 5
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 4
+Checkpoint 6
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Checkpoint 1
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 4
+Inside gen projectors
+Inside gen projectors
+Checkpoint 5
+Checkpoint 1
+Checkpoint 6
+Checkpoint 4
+Checkpoint 1
+Checkpoint 4
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 5
+Checkpoint 6
+Checkpoint 5
+Inside gen projectors
+Checkpoint 5
+Checkpoint 1
+Checkpoint 6
+Checkpoint 1
+Inside gen projectors
+inside loop
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Checkpoint 6
+Checkpoint 1
+inside loop
+Checkpoint 1
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 1
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Inside gen projectors
+Checkpoint 4
+Checkpoint 4
+Checkpoint 1
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 6
+Checkpoint 5
+Inside gen projectors
+Checkpoint 6
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 5
+Checkpoint 1
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Checkpoint 6
+Checkpoint 3
+Checkpoint 6
+Inside gen projectors
+Checkpoint 4
+Checkpoint 4
+Checkpoint 1
+Checkpoint 5
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Checkpoint 4
+Inside gen projectors
+Checkpoint 6
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 1
+Checkpoint 6
+Checkpoint 5
+Checkpoint 4
+Inside gen projectors
+Checkpoint 1
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+inside loop
+Inside gen projectors
+Checkpoint 6
+Checkpoint 1
+inside loop
+Checkpoint 4
+Checkpoint 5
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Inside gen projectors
+Checkpoint 4
+Checkpoint 1
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+inside loop
+Inside gen projectors
+Checkpoint 1
+inside loop
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+inside loop
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 4
+Checkpoint 3
+Checkpoint 5
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 3
+Checkpoint 6
+Checkpoint 3
+Checkpoint 3
+Inside gen projectors
+Checkpoint 1
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 6
+Inside gen projectors
+Checkpoint 3
+Checkpoint 1
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 3
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 3
+Inside gen projectors
+Checkpoint 3
+Checkpoint 3
+Checkpoint 1
+Checkpoint 6
+Checkpoint 3
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 3
+Checkpoint 3
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 3
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 3
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 5
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 6
+Checkpoint 1
+Inside gen projectors
+Checkpoint 4
+Checkpoint 3
+Checkpoint 1
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Checkpoint 5
+Checkpoint 4
+Inside gen projectors
+Checkpoint 5
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Checkpoint 4
+Checkpoint 6
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 5
+Inside gen projectors
+Inside gen projectors
+Checkpoint 4
+Checkpoint 1
+Checkpoint 1
+inside loop
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 4
+Checkpoint 1
+Checkpoint 5
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 6
+Checkpoint 4
+Checkpoint 1
+Checkpoint 5
+inside loop
+Inside gen projectors
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 5
+Checkpoint 1
+Checkpoint 6
+Checkpoint 3
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Checkpoint 4
+Inside gen projectors
+Checkpoint 4
+Checkpoint 1
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 3
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 6
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Checkpoint 4
+Checkpoint 6
+Inside gen projectors
+Checkpoint 5
+Checkpoint 4
+Inside gen projectors
+Checkpoint 1
+Checkpoint 5
+Checkpoint 1
+Checkpoint 6
+inside loop
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 4
+Checkpoint 4
+Checkpoint 1
+Checkpoint 5
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 5
+Checkpoint 1
+Inside gen projectors
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+inside loop
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 5
+Checkpoint 1
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Checkpoint 5
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Inside gen projectors
+Inside gen projectors
+Checkpoint 4
+Checkpoint 5
+Checkpoint 1
+Checkpoint 1
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 4
+Checkpoint 1
+Inside gen projectors
+Checkpoint 5
+Checkpoint 1
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 5
+Checkpoint 1
+inside loop
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 4
+Checkpoint 6
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Inside gen projectors
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Checkpoint 5
+Checkpoint 4
+Inside gen projectors
+Inside gen projectors
+Checkpoint 4
+Inside gen projectors
+Checkpoint 1
+Checkpoint 5
+inside loop
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Checkpoint 5
+Checkpoint 4
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Inside gen projectors
+Inside gen projectors
+Checkpoint 4
+Checkpoint 1
+Checkpoint 5
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 5
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 6
+Inside gen projectors
+Inside gen projectors
+Checkpoint 5
+Checkpoint 1
+Checkpoint 6
+Checkpoint 1
+Inside gen projectors
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Inside gen projectors
+Checkpoint 6
+Checkpoint 1
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 6
+Checkpoint 5
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 4
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 5
+Checkpoint 6
+Checkpoint 1
+Inside gen projectors
+Checkpoint 4
+Checkpoint 1
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 6
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Inside gen projectors
+Checkpoint 1
+Checkpoint 1
+Checkpoint 3
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 3
+Checkpoint 6
+Checkpoint 3
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 3
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 6
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 3
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 3
+Checkpoint 6
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 3
+Checkpoint 6
+Checkpoint 3
+Checkpoint 6
+Checkpoint 6
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 3
+Checkpoint 6
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Checkpoint 3
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 5
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+inside loop
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 3
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 3
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 5
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Inside gen projectors
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 1
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 4
+Checkpoint 6
+Checkpoint 5
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 6
+Inside gen projectors
+Checkpoint 4
+Checkpoint 1
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+inside loop
+Checkpoint 6
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 6
+Inside gen projectors
+Checkpoint 1
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 3
+Checkpoint 3
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+Checkpoint 4
+Checkpoint 5
+Checkpoint 4
+Checkpoint 5
+Checkpoint 6
+Checkpoint 6
+	NL projectors generated.
+
+
+******************************************************************************
+
+2. CALCULATING HAMILTONIAN ENERGY RANGE | Mon Dec  9 09:01:22 2024
+
+
+******************************************************************************
+
+Approximating energy range of Hamiltonian as [Vmin, Vmax + KE_max]
+Emin = -0.960944, Emax = 17.0722, dE = 18.0331
+
+done calculate energy range, CPU time (sec) 0.00013, wall run time (sec) 0
+
+
+******************************************************************************
+
+3. GENERATING COEFFICIENTS | Mon Dec  9 09:01:22 2024
+
+
+******************************************************************************
+
+Calculating Newton interpolation coefficients for filter functions.
+ncheby = 4096 dt = 8254.63 dE = 18.0331
+
+
+******************************************************************************
+
+4. STARTING FILTERING | Mon Dec  9 09:01:23 2024
+
+
+******************************************************************************
+
+Energy width, sigma, of filter function = 0.00778281 a.u.
+Suggested max span of spectrum for filtering = 0.124525 a.u.
+Requested span of spectrum to filter = 0.095619 a.u.
+Starting filtering loop
+
+	Currently working on iteration 1 of filtering cycle
+	  (~128 states)
+
+	  [                ]   0% | Mon Dec  9 09:01:34 2024
+
+	  [####            ]  25% | Mon Dec  9 09:24:34 2024
+
+	  [########        ]  50% | Mon Dec  9 09:47:32 2024
+
+	  [############    ]  75% | Mon Dec  9 10:10:29 2024
+
+	  [############### ] 100% | Mon Dec  9 10:33:28 2024
+
+	Currently working on iteration 2 of filtering cycle
+	  (~256 states)
+
+	  [                ]   0% | Mon Dec  9 10:33:29 2024
+
+	  [####            ]  25% | Mon Dec  9 10:56:29 2024
+
+	  [########        ]  50% | Mon Dec  9 11:19:29 2024
+
+	  [############    ]  75% | Mon Dec  9 11:42:22 2024
+
+	  [############### ] 100% | Mon Dec  9 12:05:12 2024
+
+	Currently working on iteration 3 of filtering cycle
+	  (~384 states)
+
+	  [                ]   0% | Mon Dec  9 12:05:13 2024
+
+	  [####            ]  25% | Mon Dec  9 12:28:04 2024
+
+	  [########        ]  50% | Mon Dec  9 12:51:01 2024
+
+	  [############    ]  75% | Mon Dec  9 13:13:53 2024
+
+	  [############### ] 100% | Mon Dec  9 13:36:52 2024
+
+	Currently working on iteration 4 of filtering cycle
+	  (~512 states)
+
+	  [                ]   0% | Mon Dec  9 13:36:53 2024
+
+	  [####            ]  25% | Mon Dec  9 13:59:42 2024
+
+	  [########        ]  50% | Mon Dec  9 14:22:28 2024
+
+	  [############    ]  75% | Mon Dec  9 14:45:28 2024
+
+	  [############### ] 100% | Mon Dec  9 15:08:23 2024
+
+	Currently working on iteration 5 of filtering cycle
+	  (~640 states)
+
+	  [                ]   0% | Mon Dec  9 15:08:24 2024
+
+	  [####            ]  25% | Mon Dec  9 15:31:25 2024
+
+	  [########        ]  50% | Mon Dec  9 15:54:20 2024
+
+	  [############    ]  75% | Mon Dec  9 16:17:14 2024
+
+	  [############### ] 100% | Mon Dec  9 16:40:18 2024
+
+	Currently working on iteration 6 of filtering cycle
+	  (~768 states)
+
+	  [                ]   0% | Mon Dec  9 16:40:20 2024
+
+	  [####            ]  25% | Mon Dec  9 17:03:05 2024
+
+	  [########        ]  50% | Mon Dec  9 17:25:57 2024
+
+	  [############    ]  75% | Mon Dec  9 17:48:36 2024
+
+	  [############### ] 100% | Mon Dec  9 18:05:15 2024
+
+
+Normalizing filtered states
+Computing the energies of all filtered states
+
+done calculating filter, CPU time (sec) 4.06408e+06, wall run time (sec) 32640
+
+Time-reversing all filtered states (doubles number of orthogonal states)
+
+******************************************************************************
+
+5. ORTHOGONALIZATING FILTERED STATES | Mon Dec  9 18:05:33 2024
+
+
+******************************************************************************
+mn_states_tot before ortho = 768
+Complex wavefunctions used. Allocating "rwork & work_z" for complex SVD
+Doing complex-valued SVD...
+Done with SVD
+
+SVD cutoff (no. orthogonal vectors) is 1122
+Spinor wavefunctions used. Freeing rwork and work_z
+mn_states_tot after ortho = 1122
+
+done calculating ortho, CPU time (sec) 46990.2, wall run time (sec) 582
+
+
+******************************************************************************
+
+6. DIAGONALIZING HAMILTONIAN | Mon Dec  9 18:15:15 2024
+
+
+******************************************************************************
+Constructing Hamiltonian matrix
+	  [                ]   0% | Mon Dec  9 18:15:16 2024
+
+	  [###             ]  25% | Mon Dec  9 18:20:26 2024
+
+	  [#######         ]  50% | Mon Dec  9 18:28:07 2024
+
+	  [###########     ]  75% | Mon Dec  9 18:38:09 2024
+
+	  [############### ] 100% | Mon Dec  9 18:48:53 2024
+
+	  [############### ] 100% | Mon Dec  9 18:48:55 2024
+
+Diagonalizing Hamiltonian | Mon Dec  9 18:48:56 2024
+
+Diagonalization complete! | Mon Dec  9 18:48:57 2024
+
+Writing out eigenvectors in the grid basis
+	Finished grid point no. 0 | Mon Dec  9 18:48:57 2024
+
+	Finished grid point no. 780448 | Mon Dec  9 18:49:39 2024
+
+	Finished grid point no. 1560896 | Mon Dec  9 18:50:21 2024
+
+	Finished grid point no. 2341344 | Mon Dec  9 18:51:03 2024
+
+
+done calculating Hmat, CPU time (sec) 134513, wall run time (sec) 2194
+
+
+******************************************************************************
+
+7. CALCULATING VARIANCE OF EIGENVALUES | Mon Dec  9 18:51:49 2024
+
+
+******************************************************************************

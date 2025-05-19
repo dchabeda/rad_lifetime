@@ -1,0 +1,198 @@
+Sat Mar  8 17:47:05 2025
+
+******************************************************************************
+
+ist->nx = 304	ist->dx = 0.500000
+ist->ny = 304	ist->dy = 0.500000
+ist->nz = 304	ist->dz = 0.500000
+par->epsx = 6.1 par->epsy = 6.1 par->epsz = 6.1
+fermiEnergy = -0.19
+The number of openMP threads used = 64
+Total # of filtered hole eigenstates = 113
+Total # of filtered electron eigenstates = 57
+The eval.par index of the HOMO state = 139
+The eval.par index of the LUMO state = 140
+The HOMO energy = -0.22749297 -6.19040224
+The LUMO energy = -0.15898747 -4.32627159
+Fundamental gap = 0.0685055031 1.8641306469
+The total number of atoms = 7344
+Number of grid points used: nx = 304  ny = 304  nz = 304
+Length of pseudopotential files, npot = 8192
+Kinetic energy maximum = 10.0000
+Dielectric Constant: epsx = 6.1000 epsy = 6.1000 epsz = 6.1000
+Maximum sigma for an eigenstate, deps = 0.0001
+Energy windows, electrons = 0.2000 holes = 0.1000
+The number of hole eigenstates within 0.1000 of the HOMO energy = 113
+The number of electron eigenstates within 0.2000 of the LUMO energy = 57
+Total number of carrier states, ms = 170
+QD (minimum) dimensions: xd = 76.00 yd = 76.00 zd = 76.00
+Final Box Dimensions: xd = 76 yd = 76 zd = 76
+Gamma = 0.046053
+Grid point spacing: dx = 0.5000 dy = 0.5000 dz = 0.5000 dv = 0.125000 dr = 0.866025
+gamma = 0.0460526  gammaeps = 0.113742
+sqrtaveps = 2.46982
+grid->dkx = 0.0413367 grid->dky = 0.0413367 grid->dkz = 0.0413367
+ngrid_1 = 3.55942e-08
+The index of lowest energy occupied level used = 25
+allocating memory for 113 hole and 57 electron states
+closed ppsifreeing evalindex
+freeing psihomo
+freeing psilumo
+Number of hole eigenstates used in the BSE calculation = 32
+Number of electron eigenstates used in the BSE calculation =  32
+Total number of eigenstates used in the BSE calculation = 64
+
+Computing spin composition of qp spinors | Sat Mar  8 17:48:44 2025
+
+Starting calculation of BSE kernel | Sat Mar  8 17:49:26 2025
+
+Determining the workload for abtot = 1024 on MPI even rank 1
+even rank 1 sqrt even/size = 0.707107
+even rank 1 start = 724
+even rank 1 end = 1024
+Calculating screened direct matrix, K^d_ab,ij on rank 1 | Sat Mar  8 17:49:33 2025
+
+Determining the workload for aitot = 1024 on MPI odd rank 1
+odd rank 1 sqrt odd/size = 0.707107
+odd rank 1 start = 724
+odd rank 1 end = 1024
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 3 | Sat Mar  8 17:49:33 2025
+ 
+Determining the workload for abtot = 1024 on MPI even rank 0
+even rank 0 sqrt even/size = 0
+even rank 0 start = 0
+even rank 0 end = 724
+Number of direct mat cycles = 724
+Calculating screened direct matrix, K^d_ab,ij on rank 0 | Sat Mar  8 17:49:33 2025
+
+Determining the workload for aitot = 1024 on MPI odd rank 0
+odd rank 0 sqrt odd/size = 0
+odd rank 0 start = 0
+odd rank 0 end = 724
+Number of exchange mat cycles = 724
+
+Computing bare exchange matrix, K^x_(ai,bj) on rank 1 | Sat Mar  8 17:49:33 2025
+ 
+	  [                ]   0% | Sat Mar  8 17:49:34 2025
+
+	  [                ]   0% | Sat Mar  8 17:49:53 2025
+
+	  [####            ]  25% | Sat Mar  8 17:57:43 2025
+
+	  [####            ]  25% | Sat Mar  8 18:04:19 2025
+
+	  [########        ]  50% | Sat Mar  8 18:16:48 2025
+
+	  [########        ]  50% | Sat Mar  8 18:21:45 2025
+
+	  [############    ]  75% | Sat Mar  8 18:40:03 2025
+
+	  [############    ]  75% | Sat Mar  8 18:41:58 2025
+
+	  [############### ] 100% | Sat Mar  8 19:07:22 2025
+
+  Done computing exchange mat | Sat Mar  8 19:07:22 2025
+
+	  [############### ] 100% | Sat Mar  8 19:10:35 2025
+
+  Done computing direct mat | Sat Mar  8 19:10:35 2025
+
+Successfully reduced direct mat from even ranks | Sat Mar  8 19:10:35 2025
+
+Successfully reduced exchange mat from even ranks | Sat Mar  8 19:10:35 2025
+
+Successfully sent exchange mat to mpi_rank 0 | Sat Mar  8 19:10:35 2025
+
+
+Computing angular momentum elements | Sat Mar  8 19:10:36 2025
+
+Hole States: | Sat Mar  8 19:11:11 2025
+
+0	0	1.018887	-1.112193	0.103146	3837.576986	0.976775
+1	1	-1.018884	1.112192	-0.103147	3837.577049	0.976775
+2	2	-0.626437	0.650259	0.272696	3841.078888	-1.246796
+3	3	0.626436	-0.650261	-0.272697	3841.078730	-1.246796
+4	4	-1.124994	1.310552	0.032990	3839.261802	-1.387453
+5	5	1.124990	-1.310555	-0.032990	3839.261305	-1.387452
+6	6	-0.050537	0.199420	-2.259430	3803.435532	1.559911
+7	7	0.050536	-0.199420	2.259431	3803.435129	1.559911
+8	8	0.231514	0.262022	2.061401	3904.857440	-1.669850
+9	9	-0.231514	-0.262021	-2.061403	3904.857495	-1.669850
+10	10	0.433154	1.074805	-0.174610	4563.320021	-1.531778
+11	11	-0.433154	-1.074805	0.174610	4563.319607	-1.531779
+12	12	0.148557	0.116938	-0.217749	3077.112353	0.298211
+13	13	-0.148557	-0.116938	0.217749	3077.112300	0.298212
+14	14	-0.227480	-0.290869	-0.367318	3099.263935	0.747932
+15	15	0.227480	0.290869	0.367318	3099.263852	0.747932
+16	16	0.257364	-0.134995	-0.111100	3095.057568	0.323027
+17	17	-0.257365	0.134995	0.111100	3095.057645	0.323027
+18	18	0.243123	-0.368802	0.766119	3786.392283	-0.312789
+19	19	-0.243122	0.368802	-0.766119	3786.392322	-0.312789
+20	20	-0.112812	-0.102492	0.654162	3844.808736	-1.060901
+21	21	0.112812	0.102491	-0.654162	3844.808737	-1.060901
+22	22	0.601659	0.110564	0.070598	3840.769517	-1.012298
+23	23	-0.601659	-0.110564	-0.070598	3840.769490	-1.012298
+24	24	-0.323686	-0.019149	0.068479	3058.326445	0.277110
+25	25	0.323686	0.019149	-0.068479	3058.326449	0.277110
+26	26	0.338974	-0.314377	0.890777	3044.820584	-0.058839
+27	27	-0.338974	0.314377	-0.890777	3044.820580	-0.058839
+28	28	-0.113021	-0.008746	-1.390590	3102.155669	-1.187815
+29	29	0.113021	0.008747	1.390590	3102.155676	-1.187815
+30	30	0.103728	0.297847	0.095245	2293.035354	-0.488348
+31	31	-0.103728	-0.297847	-0.095245	2293.035354	-0.488348
+Electron States: | Sat Mar  8 19:14:52 2025
+
+32	32	0.437549	0.819052	-0.408397	1490.066698	-1.611114
+33	33	-0.437549	-0.819052	0.408397	1490.066650	-1.611114
+34	34	-0.257027	-0.526797	-0.019016	2107.331154	-0.681549
+35	35	0.257027	0.526798	0.019017	2107.330981	-0.681549
+36	36	-0.253208	0.466224	1.391245	2045.968167	-2.027374
+37	37	0.253207	-0.466223	-1.391246	2045.968131	-2.027374
+38	38	-0.064819	-0.064788	0.921423	2078.098327	-1.611436
+39	39	0.064819	0.064792	-0.921423	2078.099153	-1.611437
+40	40	0.460804	-0.319318	0.006033	2670.550011	-0.741145
+41	41	-0.460803	0.319319	-0.006032	2670.547045	-0.741149
+42	42	0.578575	0.446022	-0.769052	2445.716487	0.928266
+43	43	-0.578589	-0.445999	0.769044	2445.712909	0.928263
+44	44	0.175225	0.527892	0.069710	2318.251456	-0.444345
+45	45	-0.175209	-0.527918	-0.069715	2318.246377	-0.444356
+46	46	0.227156	-1.001369	-0.007465	2431.685646	-2.677765
+47	47	-0.227158	1.001357	0.007465	2431.687214	-2.677780
+48	48	1.518051	0.377154	0.182866	2553.429368	-3.173634
+49	49	-1.518054	-0.377147	-0.182872	2553.427522	-3.173622
+50	50	-0.545012	0.590388	0.458413	2228.796792	-1.408630
+51	51	0.545085	-0.590336	-0.458429	2228.862734	-1.408661
+52	52	-1.532020	-0.515470	0.419310	2897.227378	2.103610
+53	53	1.531903	0.515496	-0.419228	2897.228816	2.103582
+54	54	0.054929	0.654667	-2.040811	2993.534935	-1.848674
+55	55	-0.055027	-0.654762	2.040685	2993.513213	-1.848742
+56	56	-1.490209	1.429826	0.720454	2974.155849	-2.300140
+57	57	1.490250	-1.429768	-0.720423	2974.177185	-2.300111
+58	58	0.400717	-0.613541	0.187641	2746.158680	0.456341
+59	59	-0.402139	0.612891	-0.187437	2746.212937	0.456316
+60	60	-1.135623	1.025172	-0.548534	2744.373468	-0.167675
+61	61	1.137014	-1.024734	0.548504	2744.474382	-0.167723
+62	62	-0.360783	-0.683103	-0.341632	2337.627951	-2.320043
+63	63	0.360202	0.684020	0.341916	2337.712192	-2.320314
+
+Computing spinor BSE | Sat Mar  8 19:19:27 2025
+
+The number of electron-hole pairs in the exciton basis = 1024
+Ground state exciton has energy = 0.0648856748 (1.7656300503 eV) (0.0000000000 Imag)
+Compute excitonic spin expectation values | Sat Mar  8 19:19:30 2025
+
+Compute exciton orbital ang mom expectation values | Sat Mar  8 19:19:30 2025
+
+Compute excitonic spin-orbit expectation values | Sat Mar  8 19:19:31 2025
+
+Compute all excitonic states | Sat Mar  8 19:19:31 2025
+
+U^+ H = U^+HU | Sat Mar  8 19:19:32 2025
+
+Compute excitonic optical properties | Sat Mar  8 19:19:33 2025
+
+
+******************************************************************************
+
+Sat Mar  8 19:19:36 2025
